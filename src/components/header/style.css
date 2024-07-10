@@ -1,0 +1,31 @@
+.Header {
+  display: flex;
+  justify-content: center;
+}
+
+.Header-login-Service {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.Header-login-Service li {
+  display: inline-block
+}
+
+.Header-login-Service a {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 160%;
+}
+
+
+
+
+.customerService-info {
+  position: absolute;
+  display: none;
+ 
+}
+
