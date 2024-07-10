@@ -45,7 +45,7 @@ body, h2, p, ul, li, span {
 
 .customer-service-title {
   color: var(--content, #333);
-  font-size: 21.328px;
+  font-size: 21px;
   font-weight: 700;
   line-height: 140%; 
 }
@@ -61,7 +61,7 @@ body, h2, p, ul, li, span {
   padding: 10px 20px;
   border-radius: 5px;
   text-align: center;
-  font-size: 37.897px;
+  font-size: 38px;
   font-weight: 700;
 }
 
