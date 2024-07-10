@@ -20,6 +20,9 @@ class NavMenu extends HTMLElement {
   connectedCallback() {
     this.shadowRoot.innerHTML = `
       <style>
+        :host {
+          display: inline-block; /* 부모 요소가 자식 요소의 크기를 상속받도록 설정 */
+        }
         ul {
           width: 600px;
           display: flex;
