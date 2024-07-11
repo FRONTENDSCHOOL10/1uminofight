@@ -1,0 +1,3 @@
+<svg class="icon icon-question">
+      <use xlink:href="/sprite/icons.svg#Food"></use>
+    </svg>
