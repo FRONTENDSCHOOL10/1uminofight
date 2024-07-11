@@ -9,7 +9,7 @@ cf. 특이사항
 - 이후에 헤더 컴포넌트에 포함될 예정
 */
 
-import './headerCategoryItemList.js';
+import './header-category-item-list.js';
 
 const template = document.createElement('template');
 template.innerHTML = `
