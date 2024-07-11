@@ -35,7 +35,7 @@ class ProductCount extends HTMLElement {
                 .product-count button {
                     background: none;
                     border: none;
-                    padding: 0;
+                    padding: 10px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -46,8 +46,7 @@ class ProductCount extends HTMLElement {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 24px;
-                    font-weight: bold; /* 숫자를 굵은 글씨로 설정 */
+                    font-weight: 500;
                 }
             </style>
             <div class="product-count">
