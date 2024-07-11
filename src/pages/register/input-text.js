@@ -8,13 +8,12 @@ input/text 컴포넌트
 cf. 
 - html 사용
 	각 컴포넌트는 label 속성을 통해 라벨 텍스트를 지정
-	<input-container label="아이디를 입력해주세요"></input-container>
-	<input-container label="비밀번호를 입력해주세요"></input-container>
-	<input-container label="비밀번호를 한번 더 입력해주세요"></input-container>
-	<input-container label="이름을 한번 더 입력해주세요"></input-container>
-	<input-container label="예) marketkarly@karly.com"></input-container>
-	<input-container label="숫자만 입력해주세요"></input-container>
-	<script src="input-text.js"></script>
+	<input-text-container label="아이디를 입력해주세요"></input-text-container>
+	<input-text-container label="비밀번호를 입력해주세요"></input-text-container>
+	<input-text-container label="비밀번호를 한번 더 입력해주세요"></input-text-container>
+	<input-text-container label="이름을 한번 더 입력해주세요"></input-text-container>
+	<input-text-container label="예) marketkarly@karly.com"></input-text-container>
+	<input-text-container label="숫자만 입력해주세요"></input-text-container>
 */
 
 class InputContainer extends HTMLElement {

@@ -9,4 +9,5 @@ import '/src/components/headerCategoryItemList.js'
 import cart from '/src/assets/images/Cart.png'
 const myHTMLTemplate =() => `
 	<img src="${cart}" alt />
-`
+`;
+import '/src/pages/register/input-text.js';
