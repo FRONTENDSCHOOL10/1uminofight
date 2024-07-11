@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+vite.config.js
+index.html
+main.js
+package.json
+forhtml.html
+justtosave.txt

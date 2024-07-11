@@ -4,13 +4,17 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "npm run dev --open",
+    "dev": "vite --host localhost --port 3000 --cors",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "clean": "rm -rf docs",
+    "generate-sprite": "node generate-sprite.js"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
     "prettier": "^3.1.1",
+    "svg-sprite": "^2.0.4",
     "vite": "^5.0.8"
   }
 }
