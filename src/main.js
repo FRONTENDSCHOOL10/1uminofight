@@ -10,4 +10,3 @@ import cart from '/src/assets/images/Cart.png';
 const myHTMLTemplate = () => `
 	<img src="${cart}" alt />
 `;
-import '/src/pages/productDetail/index.js'
