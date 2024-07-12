@@ -9,7 +9,7 @@ cf. 특이사항
 - 이후에 헤더 컴포넌트에 포함될 예정
 */
 
-import './headerCategoryItemList.js';
+import './header-category-item-list.js';
 
 const template = document.createElement('template');
 template.innerHTML = `
@@ -41,25 +41,30 @@ template.innerHTML = `
     .header-category-tab:hover header-category-item-list {
       display: flex;
     }
+    .is-opened {
+      header-category-item-list {
+        display: flex
+      }
+    }
   </style>
-  <div class="header-category-tab" role="group" aria-haspopup="true" aria-expanded="false" aria-controls="category-item-list">
-  <svg
-    class="icon-hamburger"
-    width="16"
-    height="14"
-    viewBox="0 0 16 14"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-  <path
-    fill-rule="evenodd"
-    clip-rule="evenodd"
-    d="M0 0H16V1.7H0V0ZM0 6.15H16V7.85H0V6.15ZM0 12.3H16V14H0V12.3Z"
-    fill="#333333"
-  />
-  <span>카테고리</span>
-  </svg>
-  <header-category-item-list id="category-item-list"></header-category-item-list>
+  <div class="header-category-tab" role="button" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="category-item-list">
+    <svg
+      class="icon-hamburger"
+      width="16"
+      height="14"
+      viewBox="0 0 16 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M0 0H16V1.7H0V0ZM0 6.15H16V7.85H0V6.15ZM0 12.3H16V14H0V12.3Z"
+      fill="#333333"
+    />
+    <span>카테고리</span>
+    </svg>
+    <header-category-item-list id="category-item-list"></header-category-item-list>
   </div>
 `;
 
@@ -71,6 +76,7 @@ class HeaderCategory extends HTMLElement {
     this.shadowRoot.appendChild(template.content.cloneNode(true));
 
     const tab = this.shadowRoot.querySelector('.header-category-tab');
+    const li = this.shadowRoot.querySelector('li');
 
     tab.addEventListener('mouseover', () => {
       tab.setAttribute('aria-expanded', 'true');
@@ -79,6 +85,17 @@ class HeaderCategory extends HTMLElement {
     tab.addEventListener('mouseout', () => {
       tab.setAttribute('aria-expanded', 'false');
     });
+
+    tab.addEventListener('keydown', () => {
+      if (!tab.classList.contains('is-opened')) tab.classList.add('is-opened');
+      else tab.classList.remove('is-opened');
+    });
+
+    tab.addEventListener('focusout', () => {
+      tab.classList.remove('is-opened');
+    });
+
+    // li 태그를 다 키보드로 돌고 벗어났을 때 창이 닫히게 하는 기능 구현 필요.
   }
 }
 

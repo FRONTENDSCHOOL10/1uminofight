@@ -10,7 +10,7 @@ cf. 특이사항
 - 이후에 헤더 컴포넌트에 포함될 예정
 */
 
-// HeaderCategoryItem 컴포넌트
+//******************* HeaderCategoryItem 컴포넌트 ********************
 
 import { data } from './icon-data.js';
 
@@ -58,7 +58,7 @@ class HeaderCategoryItem extends HTMLElement {
 if (!customElements.get('header-category-item')) {
   customElements.define('header-category-item', HeaderCategoryItem);
 }
-// HeaderCategoryItemList 컴포넌트
+// **************** HeaderCategoryItemList 컴포넌트 *************
 
 class HeaderCategoryItemList extends HTMLElement {
   constructor() {
