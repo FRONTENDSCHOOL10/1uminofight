@@ -18,29 +18,15 @@ class TableAnswer extends HTMLElement {
     }
   }
 
-  escapeHtml(unsafe) {
-    return unsafe
-      .replace(/\n/g, '<br>')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#039;');
-  }
-
   render() {
-    const question = this.escapeHtml(
-      this.getAttribute('question') || ''
-    ).replace(/\n/g, '<br>');
-    const answer = this.escapeHtml(this.getAttribute('answer') || '').replace(
-      /\n/g,
-      '<br>'
-    );
-    const date = this.escapeHtml(this.getAttribute('date') || '');
+    const question = this.getAttribute('question');
+    const answer = this.getAttribute('answer');
+    const date = this.getAttribute('date');
     this.shadowRoot.innerHTML = `
     <style>
         .qa-container {
             width: 1050px;
-            height: 420px;
+            height: auto;
             position: relative;
             padding: 0px;
             border-top: 1px solid #E1E1E1;
@@ -49,14 +35,15 @@ class TableAnswer extends HTMLElement {
             background-color: #F9F9F9;
         }
         .icon {
-            margin-right: 10px;
+            margin-right: 30px;
             width: 24px;
             height: 24px;
-            background-color: blue;
+            flex-shrink: 0;
         }
         .icon svg {
             width: 100%;
             height: 100%;
+            display: block;
         }    
         .qa-text {
             font-size: 12px;
@@ -64,34 +51,34 @@ class TableAnswer extends HTMLElement {
         }
         .question-container, .answer-container {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             margin: 20px;
+            margin-bottom: 50px;
         }
-        .answer-container {
-            
-        }
+
         .date {
             margin-top: 10px;
-            font-size: 0.9em;
-            color: #555;
+            font-size: 12px;
+            color: #898989;
         }
-        .q-text {
-            font-weight: bold;
+        .question, .answer {
+            margin: 0px;
+            font-weight: 600;
         }
     </style>
 
     <div class="qa-container">
       <div class="question-container">
         <div class="icon"><svg><use href="/public/sprite/icons.svg#Question"></use></svg></div>
-        <p class="q-text">${question}</p>
+        <p class="question">${question}</p>
       </div>
       <div class="answer-container">
         <div class="icon"><svg><use href="/public/sprite/icons.svg#Answer"></use></svg></div>
         <div class="qa-text">
-          <div class="answer">${answer}</div>
+          <p class="answer">${answer}</p>
+          <p class="date">${date}</p>
         </div>
       </div>
-      <div class="date">${date}</div>
     </div>
     `;
   }
