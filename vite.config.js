@@ -8,6 +8,10 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         login: resolve(__dirname, './src/pages/login/login.html'),
+        productList: resolve(
+          __dirname,
+          './src/pages/productList/productList.html'
+        ),
       },
     },
   },

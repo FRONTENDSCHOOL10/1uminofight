@@ -4,17 +4,18 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "npm run dev --open",
-    "dev": "vite --host localhost --port 3000 --cors",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "clean": "rm -rf docs",
-    "generate-sprite": "node generate-sprite.js"
+    "clean": "rm -rf docs"
   },
   "devDependencies": {
-    "eslint": "^8.56.0",
-    "prettier": "^3.1.1",
-    "svg-sprite": "^2.0.4",
-    "vite": "^5.0.8"
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.2",
+    "vite": "^5.3.3"
+  },
+  "dependencies": {
+    "kind-tiger": "^1.0.1",
+    "pocketbase": "^0.21.3"
   }
 }
