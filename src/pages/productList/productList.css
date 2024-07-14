@@ -1,0 +1,13 @@
+.best-products {
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    width: 783px;
+    gap: 12px;
+  }
+}
+
+.product-item {
+  height: 538px;
+}
