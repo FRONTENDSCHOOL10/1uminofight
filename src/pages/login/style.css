@@ -1,0 +1,28 @@
+body {
+    width: 1920px;
+    height: 527px;
+    padding: 80px 0px 80px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+
+.middle {
+    width: 50%;
+    height: 50%;
+    padding: 80px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 44px;
+}
+
+
+.login-font {
+    font-weight: 600;
+    font-size: 21.33px;
+    line-height: 31.99px;
+	align-items: center;
+
+}

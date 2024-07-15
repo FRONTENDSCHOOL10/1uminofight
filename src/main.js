@@ -8,6 +8,15 @@ import '/src/components/header-category.js';
 import '/src/components/header-category-item-list.js';
 import cart from '/src/assets/images/Cart.png';
 import '/src/pages/productList/productList.js';
+import '/src/components/nav-menu.js';
+import '/src/components/header-category.js';
+import '/src/components/nav-menu.js';
+import '/src/components/header-category.js';
+import '/src/components/input-search-header.js';
+import '/src/components/input-text.js';
+
 const myHTMLTemplate = () => `
 	<img src="${cart}" alt />
 `;
+
+
