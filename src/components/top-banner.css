@@ -1,0 +1,46 @@
+
+.Top-banner {
+  background: var(--primary, #5f0080);
+  width: 100vw; /* 뷰포트 전체 너비로 하면 잘 나옴 고정값으로 해야 될 것 같은데.. */
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+}
+
+.Top-banner-Inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Top-banner a {
+  text-decoration: none;
+  display: flex;
+  color: inherit; /* 부모의 색상을 상속받음 color #fff 하고 새로고침하면 색이 안나옴.. */
+  align-items: center;
+}
+
+.Top-banner p {
+  margin: 0;
+  cursor: pointer; /* 마우스를 올렸을 때 포인터 커서로 변경 */
+  
+}
+
+.Top-banner span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.Top-banner-Close {
+  background: none;
+  border: none;
+  cursor: pointer; /* 마우스를 올렸을 때 포인터 커서로 변경 */
+  
+ 
+}
+
