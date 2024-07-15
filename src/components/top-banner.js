@@ -1,7 +1,6 @@
 // Top-banner 최상단배너 컴포넌트
 // 기능 x 버튼 누르면 사라지는 효과
-// 이슈 번호 : #00 
-
+// 이슈 번호 : #00
 
 const template = document.createElement('template');
 template.innerHTML = `
@@ -71,7 +70,9 @@ class TopBanner extends HTMLElement {
   }
 
   connectedCallback() {
-    this.shadowRoot.querySelector('.Top-banner-Close').addEventListener('click', this.handleBannerClose.bind(this));
+    this.shadowRoot
+      .querySelector('.Top-banner-Close')
+      .addEventListener('click', this.handleBannerClose.bind(this));
   }
 
   handleBannerClose() {
@@ -86,7 +87,9 @@ class TopBanner extends HTMLElement {
   }
 
   disconnectedCallback() {
-    this.shadowRoot.querySelector('.Top-banner-Close').removeEventListener('click', this.handleBannerClose);
+    this.shadowRoot
+      .querySelector('.Top-banner-Close')
+      .removeEventListener('click', this.handleBannerClose);
   }
 }
 
