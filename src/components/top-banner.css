@@ -1,3 +1,4 @@
+
 .Top-banner {
   background: var(--primary, #5f0080);
   width: 100vw; /* 뷰포트 전체 너비로 하면 잘 나옴 고정값으로 해야 될 것 같은데.. */
