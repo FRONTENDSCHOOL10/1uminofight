@@ -8,6 +8,9 @@ cf. 특이사항
 - 카테고리 hover 했을 때 나타나는 메뉴 컴포넌트
 - HeaderCategoryItem 컴포넌트 구성 -> HeaderCategory 컴포넌트 구성
 - 이후에 헤더 컴포넌트에 포함될 예정
+
+cf. 사용법
+- header-category.js에 연결되는 참조파일이라 header-category만 사용하면 됨. 
 */
 
 //******************* HeaderCategoryItem 컴포넌트 ********************
@@ -28,6 +31,7 @@ class HeaderCategoryItem extends HTMLElement {
     template.innerHTML = `
     <style>
         li {
+          background-color: white;
           box-sizing: border-box;
           width: 100%;
           height: 40px;

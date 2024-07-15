@@ -7,6 +7,9 @@ HeaderCategory 컴포넌트
 cf. 특이사항
 - 카테고리 탭 (카테고리 탭과 메뉴까지 포함하고 있는 컴포넌트)
 - 이후에 헤더 컴포넌트에 포함될 예정
+
+cf. 사용법
+- html에 <header-category></header-category> 붙이기
 */
 
 import './header-category-item-list.js';

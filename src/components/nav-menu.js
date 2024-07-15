@@ -7,6 +7,9 @@ navMenuItem 컴포넌트
 cf. 특이사항
 - navMenuItem 컴포넌트 구성 -> navMenu 컴포넌트 구성
 - 이후에 헤더 컴포넌트에 포함될 예정
+
+cf. 사용법
+- html에 <nav-menu></nav-menu> 붙이기
 */
 
 import './nav-menu-item.js';
