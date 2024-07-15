@@ -14,9 +14,9 @@ import '/src/components/nav-menu.js';
 import '/src/components/header-category.js';
 import '/src/components/input-search-header.js';
 import '/src/components/input-text.js';
+import '/src/components/Header.js';
+import '/src/components/footer/footer.js';
 
 const myHTMLTemplate = () => `
 	<img src="${cart}" alt />
 `;
-
-

@@ -17,12 +17,12 @@ cf.
 */
 
 class InputContainer extends HTMLElement {
-  constructor() {
-    super();
-    this.attachShadow({ mode: 'open' }); // Shadow DOM 생성
+    constructor() {
+        super();
+        this.attachShadow({ mode: 'open' }); // Shadow DOM 생성
 
-    // 스타일 정의
-    const style = `
+        // 스타일 정의
+        const style = `
             .input-container {
                 position: relative;
                 width: 333px;
@@ -60,30 +60,30 @@ class InputContainer extends HTMLElement {
             }
         `;
 
-    // 템플릿 정의
-    const template = `
+        // 템플릿 정의
+        const template = `
             <div class="input-container">
                 <input type="text" placeholder=" " required>
                 <label></label>
             </div>
         `;
 
-    // Shadow DOM에 스타일과 템플릿 추가
-    this.shadowRoot.innerHTML = `
+        // Shadow DOM에 스타일과 템플릿 추가
+        this.shadowRoot.innerHTML = `
             <style>${style}</style>
             ${template}
         `;
 
-    // input 및 label 요소 가져오기
-    const input = this.shadowRoot.querySelector('input');
-    const label = this.shadowRoot.querySelector('label');
-    label.textContent = this.getAttribute('label') || ''; // label 속성 설정
+        // input 및 label 요소 가져오기
+        const input = this.shadowRoot.querySelector('input');
+        const label = this.shadowRoot.querySelector('label');
+        label.textContent = this.getAttribute('label') || ''; // label 속성 설정
 
-    // input 이벤트 리스너 추가
-    input.addEventListener('input', () => {
-      label.style.display = input.value.trim() !== '' ? 'none' : 'block';
-    });
-  }
+        // input 이벤트 리스너 추가
+        input.addEventListener('input', () => {
+            label.style.display = input.value.trim() !== '' ? 'none' : 'block';
+        });
+    }
 }
 
 // 사용자 정의 요소 등록
