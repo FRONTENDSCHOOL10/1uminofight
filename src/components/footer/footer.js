@@ -1,14 +1,15 @@
+// footerNavigation 컴포넌트 #25
+
 class FooterComponent extends HTMLElement {
   constructor() {
     super();
 
     const shadow = this.attachShadow({ mode: 'open' });
 
-    // Creating the container for the footer
+    
     const footerContainer = document.createElement('div');
     footerContainer.setAttribute('class', 'footer-container');
 
-    // Fetching the footer HTML content
     footerContainer.innerHTML = `
       <div class="footer-content">
         <!-- Customer Service Section -->
@@ -142,7 +143,7 @@ class FooterComponent extends HTMLElement {
       </div>
     `;
 
-    // Creating a style element for the footer CSS
+    //  footer CSS
     const style = document.createElement('style');
     style.textContent = `
      body, h2, p, ul, li, span {
@@ -410,7 +411,7 @@ class FooterComponent extends HTMLElement {
 }
 `;
 
-    // Append the elements to the shadow DOM
+    
     shadow.appendChild(style);
     shadow.appendChild(footerContainer);
   }
