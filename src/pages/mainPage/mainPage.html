@@ -1,49 +1,17 @@
-<!-- top-banner 추가해야 함 -->
-<!-- icon-location 추가해야 함 -->
-<!-- footer 크기 조절 -->
-
 <!doctype html>
-<html lang="ko-KR">
+<html lang="ko">
   <head>
-    <title>마켓칼리 메인페이지</title>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main page</title>
     <link rel="stylesheet" href="/src/styles/style.css" />
     <link rel="stylesheet" href="/src/styles/reset.css" />
-    <link rel="stylesheet" href="/src/styles/base.css" />
-    <link rel="stylesheet" href="/src/pages/mainPage/mainPage.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="module" src="/src/main.js"></script>
-    <script type="module" src="/src/pages/mainPage/mainPage.js"></script>
+    <script type="module" src="/src/pages/mainPage/banner.js"></script>
+    <script type="module" src="/src/components/default-logo.js"></script>
+    <!-- <script type="module" src="/src/pages/mainPage/mainPage.js"></script> -->
   </head>
   <body>
-    <h1 class="sr-only">마켓칼리 메인페이지</h1>
-    <c-header></c-header>
     <main-banner></main-banner>
-
-    <div class="main-middle">
-      <section class="main-section main-first-section">
-        <h2>이 상품 어때요?</h2>
-        <div class="product-slide-container main-first-products">
-          <ul></ul>
-        </div>
-      </section>
-
-      <div class="line-banner">
-        <img
-          src="/src/assets/images/line-banner.png"
-          alt="10월 퍼플위크 관련 광고배너"
-        />
-      </div>
-
-      <section class="main-section main-second-section">
-        <h2>놓치면 후회할 가격</h2>
-        <div class="product-slide-container main-second-products">
-          <ul></ul>
-        </div>
-      </section>
-    </div>
-
-    <footer-component></footer-component>
+    <default-logo></default-logo>
   </body>
 </html>
