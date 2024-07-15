@@ -6,6 +6,9 @@ navMenu 컴포넌트
 
 cf. 특이사항
 - navMenuItem 컴포넌트 구성 -> navMenu 컴포넌트 구성
+
+cf. 사용법
+- nav-menu.js에 참조되는 파일이라 nav-menu.js만 사용하면 됨. 
 */
 
 class NavMenuItem extends HTMLElement {

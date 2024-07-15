@@ -1,3 +1,35 @@
+/*
+product-slide 컴포넌트
+기능 : 상품 리스트 나열
+사용 페이지 : 메인페이지, 상품리스트 페이지
+
+cf. 특이사항
+- product-slide.css가 product-slide.js에 연결되어 있음.
+- 함수로 컴포넌트를 나눠서 컴포넌트를 사용할 페이지의 js 파일에 renderProductSlide({collection, node, sort})를 실행해줘야 함. 
+
+cf. 사용법
+ex) mainPage.js
+import { renderProductSlide } from '/src/components/product-slide.js';
+
+const first_products = {
+  collection: 'main_first_products',
+  node: '.main-first-products > ul',
+  sort: '-created',
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderProductSlide(first_products);
+});
+
+-> 하고 html 파일에 js 파일 연결
+
+* 매개변수 설명
+- collection : 포켓베이스 데이터 collection 이름
+- node : 코드가 들어갈 위치
+- sort : 아이템이 나열되는 방식
+
+*/
+
 import defaultAuthData from '../api/defaultAuthData';
 import getPbImageURL from '../api/getPbImageURL';
 import pb from '../api/pocketbase';

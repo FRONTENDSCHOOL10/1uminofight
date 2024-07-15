@@ -10,6 +10,10 @@ defaultIconHeart 컴포넌트
 cf. 특이사항
 - 이후에 헤더 컴포넌트에 포함될 예정
 - src 폴더에 api / defaultAuthData 생성
+
+cf. 
+- 컴포넌트 사용법
+html에 <default-icon-heart></default-icon-heart) 붙이기 
 */
 
 import { getStorage, setStorage } from 'kind-tiger';

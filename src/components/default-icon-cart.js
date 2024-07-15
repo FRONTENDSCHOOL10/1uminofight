@@ -3,12 +3,16 @@ Default/Icon/Cart 컴포넌트
 기능 : 장바구니 버튼을 클릭하면 장바구니 페이지로 이동한다. 
 사용 페이지 : 헤더
 이슈번호 : #19
+
+cf. 
+- 컴포넌트 사용법
+html에 <cart-icon></cart-icon) 붙이기 
  */
 
 class Cart extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: "open" });
+    this.attachShadow({ mode: 'open' });
 
     this.shadowRoot.innerHTML = `
   <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="none" tabindex="0" role="button" aria-label = "장바구니 아이콘">
@@ -30,16 +34,16 @@ class Cart extends HTMLElement {
     </svg>
   `;
 
-    const cartIcon = this.shadowRoot.querySelector("svg");
+    const cartIcon = this.shadowRoot.querySelector('svg');
 
-    cartIcon.addEventListener("click", this.handleClick.bind(this));
+    cartIcon.addEventListener('click', this.handleClick.bind(this));
   }
 
   handleClick(e) {
     e.preventDefault();
-    location.href = "/src/pages/cart.html";
+    location.href = '/src/pages/cart.html';
     // cart page 만들고 이동
   }
 }
 
-customElements.define("cart-icon", Cart);
+customElements.define('cart-icon', Cart);
