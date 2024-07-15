@@ -19,8 +19,11 @@ class Banner extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
     <style>
-      .main-banner {
+      .main-banner-wrapper {
         position: relative;
+        width: 1920px;
+        height: 370px;
+        margin: 0 auto;
       }
       .prev-button {
         opacity: 0;
