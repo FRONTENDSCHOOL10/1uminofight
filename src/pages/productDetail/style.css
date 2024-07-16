@@ -1,0 +1,120 @@
+body {
+	font-family: 'Pretendard', sans-serif;
+}
+
+.container {
+    display: flex;
+	align-items: flex-start; /* 위로 정렬 */
+    justify-content: space-between;
+    width: 1050px;
+    height: 1021px;
+    margin: 0 auto; /* 화면 중앙에 고정 */
+    box-sizing: border-box;
+}
+
+.left, .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* 수직 정렬을 위해 추가 */
+}
+
+.left img, .right img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+.product-detail-count-box {
+    margin-top: 20px; /* 상품 설명 아래 공간을 위해 추가 */
+    width: 100%;
+}
+
+.product-selection-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.product-selection-row > span {
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #6B6B6B;
+}
+
+.product-selection {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 90px); /* Adjust width considering the width of '상품선택' span */
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.product-selection span {
+    font-size: 10px;
+	color: #6B6B6B;
+	font-weight: bolder;
+}
+
+.quantity-price-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    margin-top: 10px;
+}
+
+.quantity-control {
+    flex: 1;
+}
+
+
+.totalprice {
+	width: 500px; /* 고정 너비 */
+	height: 15px; /* 고정 높이 */
+	padding: 28px 0; /* 패딩: 상하 28px, 좌우 0px */
+	display: flex;
+	align-items: center;
+	gap: 8px; /* 요소 간의 간격 */
+}
+
+.totalprice {
+    width: 100%; 
+    padding: 28px;
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 20px; 
+}
+
+.totalprice img {
+    margin: 0 5px; /* 이미지 좌우 여백 조정 */
+}
+
+.totalprice span {
+    font-weight: bolder;
+    color: #333333;
+    font-size: 20px;
+}
+
+
+.heart-incart {
+    display: flex;
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    width: 100%; /* 필요에 따라 너비 조정 */
+    margin-top: 20px; /* 상단 여백 추가 */
+	gap: 12px
+}
+
+.product-description {
+    width: 1050px; /* .container와 동일한 너비 */
+    margin: 0 auto; /* 화면 중앙에 고정 */
+    margin-top: 20px; /* 상단 여백 추가 */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* 수직 정렬 */
+    align-items: center; /* 가운데 정렬 */
+}

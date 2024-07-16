@@ -3,10 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Count Component</title>
-    <script defer src="index.js"></script> <!-- defer 속성을 사용하여 DOMContentLoaded 이후 스크립트 실행 -->
+    <title>Product Count Page</title>
+	<script type="module" src="/src/pages/productDetail/product-Detail.js"></script>
+	<link rel="stylesheet" href="/src/pages/productDetail/style.css">
+	<c-header></c-header>
 </head>
 <body>
-    <product-count></product-count>
+
+	<div class="container">
+        <div class="left">
+            <img src="/src/assets/images/product-detail.svg" alt="상품 이미지">
+        </div>
+
+        <div class="right">
+            <div class="product-detail">
+                <img src="/src/assets/images/top-text.svg" alt="상품 설명 상단">
+                <img src="/src/assets/images/middle-text.svg" alt="상품 설명 중간">
+			</div>
+
+			<div class="product-detail-count-box">
+                <div class="product-selection-row">
+                    <span>상품선택</span>
+                    <div class="product-selection">
+                        <span class="product-name">[풀무원] 탱탱쫄면 (4개입)</span>
+                        <div class="quantity-price-row">
+                            <div class="quantity-control">
+                            	<product-count data-initial-value="1"></product-count>
+                            </div>
+                            <span class="price">4,980원</span>
+                        </div>
+                    </div>
+                </div>
+			</div>	
+
+			<div class="totalprice">
+				<img src="/src/assets/images/totalprice.svg" alt="총 상품금액">
+				<span id="totalPrice">4,980</span> <!-- 총 상품금액이 표시될 곳 -->
+				<img src="/src/assets/images/won.svg" alt="원">
+			</div>
+
+			<div class="heart-incart">
+			<heart-icon></heart-icon>
+			<img src="/src/assets/images/bell.svg" alt="알림">
+			</div>
+
+        </div>
+	</div>
+
+	    <div class="product-description">
+			<img src="/src/assets/images/product-description-top.svg" alt="상품 상세설명 상단">
+			<img src="/src/assets/images/product-description-middle.svg" alt="상품 상세설명 중단">
+		</div>
+
 </body>
 </html>
