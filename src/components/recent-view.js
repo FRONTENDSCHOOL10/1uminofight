@@ -1,3 +1,7 @@
+/*<script type="module" src="/src/components/recent-view.js"></script>
+    <recent-viewed></recent-viewed>
+    만 끼워넣으시면 돼요 */
+
 class RecentViewed extends HTMLElement {
   constructor() {
     super();
