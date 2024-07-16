@@ -1,0 +1,165 @@
+@import url('/src/styles/style.css');
+@import url('/src/styles/reset.css');
+@import url('/src/styles/base.css');
+
+body,
+button,
+.register input {
+  font-family:
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    'Helvetica Neue',
+    'Segoe UI',
+    'Apple SD Gothic Neo',
+    'Noto Sans KR',
+    'Malgun Gothic',
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    sans-serif;
+}
+section {
+  width: 640px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 21.33px;
+  line-height: 31.99px;
+  text-align: center;
+  padding: 80px 0px 40px 0px;
+}
+input-text-container, .register input, .gender-select {
+  width: 333px;
+  height: 44px;
+}
+.required-info {
+  color: #333333;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  justify-content: end;
+}
+.required-icon {
+  color: #f03f40;
+}
+.register-wrapper {
+  border-width: 2px 0 1px 0;
+  border-style: solid;
+  border-color: #333333;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.register {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 20px 0px;
+}
+.register input {
+  border-radius: 4px;
+  border: 1px solid #A6A6A6;  
+  padding-left: 20px;
+}
+.register input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #A6A6A6;
+  line-height: 25.6px;
+}
+
+.register > span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  width: 139px;
+  height: 44px;
+  padding: 4px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+button {
+  width: 143px;
+  height: 44px;
+  color: #5f0080;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #5f0080;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+.validation {
+  margin-left: 8px;
+}
+button.address-search, .error{
+  width: 333px;
+}
+.address p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19.2px;
+  margin-top: 3px;
+}
+.gender-select {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.radio-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+input[type='radio'] {
+  appearance: none; 
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  border-radius: 50%; 
+  margin: 0; 
+}
+
+input[type='radio']:checked {
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  border: 2px solid #5f0080;
+}
+.register-button {
+  display: block;
+  width: 340px;
+  color: white;
+  background-color: #5f0080;
+  margin: 0 auto;
+}
+.register-button-wrapper {
+  padding: 40px 0px 84px 0px;
+}
+.error {
+  display: none;
+  width: 333px;
+  margin: 0 auto;
+  color: red;
+  font-size: 15px;
+  position: absolute;
+  top: 75px;
+  left: 150px;
+}
+.is-invalid{
+  display: flex;
+}
+.pw-wrapper, .pw-confirm-wrapper, .id-wrapper {
+  position: relative;
+}
+#idField, #pwField, #pwConfirmField, #userName {
+  box-sizing: border-box;
+}
