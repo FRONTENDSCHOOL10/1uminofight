@@ -1,0 +1,49 @@
+.body {
+  background-color: black;
+}
+/* 기본 스타일 */
+button {
+  cursor: pointer;
+}
+
+/* 제품 목록 페이지 메인 영역 스타일 */
+.product-menu {
+  width: 800px;
+  margin: 0 0 80px auto;
+  
+  
+}
+
+.list-item-options button {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  
+   /* Label/Medium */
+   font-family: Pretendard;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 150%; /* 24px */
+
+}
+
+.product-total {
+  color: var(--content);
+
+   /* Label/Medium */
+   font-family: Pretendard;
+   font-size: 16px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 150%; /* 24px */
+}
+
+.product-item-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-item-options {
+  list-style-type: none;
+}
