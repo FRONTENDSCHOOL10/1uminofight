@@ -55,7 +55,7 @@ class LoginComponent extends HTMLElement {
       
 
       .container {
-       
+        
         text-align: center;
         max-width: 400px;
         width: 100%;

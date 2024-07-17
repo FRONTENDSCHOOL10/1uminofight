@@ -79,11 +79,11 @@ class FooterComponent extends HTMLElement {
             </ul>
           </address>
           <ul class="social-links">
-            <li><a href="#"><img src="/public/icons/ico_naver.png" alt="블로그" /></a></li>
-            <li><a href="#"><img src="/public/icons/ico_facebook.png" alt="페이스북" /></a></li>
-            <li><a href="#"><img src="/public/icons/ico_instagram.png" alt="인스타그램" /></a></li>
-            <li><a href="#"><img src="/public/icons/NaverPost.svg" alt="네이버 포스트" /></a></li>
-            <li><a href="#"><img src="/public/icons/Youtube.svg" alt="유튜브" /></a></li>
+            <li><a href="#"><img src="/icons/ico_naver.png" alt="블로그" /></a></li>
+            <li><a href="#"><img src="/icons/ico_facebook.png" alt="페이스북" /></a></li>
+            <li><a href="#"><img src="/icons/ico_instagram.png" alt="인스타그램" /></a></li>
+            <li><a href="#"><img src="/icons/NaverPost.svg" alt="네이버 포스트" /></a></li>
+            <li><a href="#"><img src="/icons/Youtube.svg" alt="유튜브" /></a></li>
           </ul>
         </div>
       </div>
@@ -92,7 +92,7 @@ class FooterComponent extends HTMLElement {
         <li>
           <figure>
             <div>
-              <img src="../../../public/icons/isms.png" alt="ISMS" />
+              <img src="/icons/isms.png" alt="ISMS" />
             </div>
             <figcaption>
               <span>[인증범위] 마켓칼리 쇼핑몰 서비스 개발 운영</span>
@@ -104,7 +104,7 @@ class FooterComponent extends HTMLElement {
         <li>
           <figure>
             <div>
-              <img src="../../../public/icons/privacy.png" alt="PRIVACY 로고" />
+              <img src="/icons/privacy.png" alt="PRIVACY 로고" />
             </div>
             <figcaption>
               <span>개인정보보호 우수 웹사이트</span>
@@ -115,7 +115,7 @@ class FooterComponent extends HTMLElement {
         <li>
           <figure>
             <div>
-              <img src="../../../public/icons/tosspayments.png" alt="toss payments 로고" />
+              <img src="/icons/tosspayments.png" alt="toss payments 로고" />
             </div>
             <figcaption>
               <span>토스페이먼츠 구매안전(에스크로) <br>서비스를 이용하실 수 있습니다.</span>
@@ -125,7 +125,7 @@ class FooterComponent extends HTMLElement {
         <li>
           <figure>
             <div>
-              <img src="../../../public/icons/wooriBank.png" alt="우리은행" />
+              <img src="/icons/wooriBank.png" alt="우리은행" />
             </div>
             <figcaption>
               <span>고객님이 현금으로 결제한 금액에 대해 우리은행과<br>채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</span>
