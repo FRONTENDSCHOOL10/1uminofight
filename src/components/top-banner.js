@@ -56,7 +56,7 @@ template.innerHTML = `
         </p>
       </a>
       <button class="Top-banner-Close" type="button">
-        <img src="../../assets/icon/ico_close_fff_84x84.png" alt="최상단 배너 닫기 버튼" />
+        <img src="/public/icons/ico_close_fff_84x84.png" alt="최상단 배너 닫기 버튼" />
       </button>
     </div>
   </div>
