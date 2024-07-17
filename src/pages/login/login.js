@@ -1,4 +1,11 @@
-// components.js
+// 로그인 컴포넌트
+
+//<login-component></login-component>
+// <script src="/src/pages/login/login.js"></script>
+
+
+
+
 class LoginComponent extends HTMLElement {
   constructor() {
     super();
@@ -34,6 +41,15 @@ class LoginComponent extends HTMLElement {
 
   getStyle() {
     return `
+      body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Pretendard;
+      }
+
       .container {
         text-align: center;
         max-width: 400px;
