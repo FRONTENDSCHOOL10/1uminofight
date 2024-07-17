@@ -46,6 +46,8 @@ template.innerHTML = `
       background: none;
       border: none;
       cursor: pointer;
+      position: absolute;
+      right: 300px;
     }
   </style>
   <div class="Top-banner">

@@ -118,7 +118,7 @@ class FooterComponent extends HTMLElement {
               <img src="../../../public/icons/tosspayments.png" alt="toss payments 로고" />
             </div>
             <figcaption>
-              <span>토스페이먼츠 구매안전(에스크로) 서비스를 이용하실 수 있습니다.</span>
+              <span>토스페이먼츠 구매안전(에스크로) <br>서비스를 이용하실 수 있습니다.</span>
             </figcaption>
           </figure>
         </li>
@@ -128,7 +128,7 @@ class FooterComponent extends HTMLElement {
               <img src="../../../public/icons/wooriBank.png" alt="우리은행" />
             </div>
             <figcaption>
-              <span>고객님이 현금으로 결제한 금액에 대해 우리은행과 <br>채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</span>
+              <span>고객님이 현금으로 결제한 금액에 대해 우리은행과<br>채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</span>
             </figcaption>
           </figure>
         </li>

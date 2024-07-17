@@ -3,8 +3,18 @@
 //<login-component></login-component>
 // <script src="/src/pages/login/login.js"></script>
 
+import '/src/components/Header.js';
+import '/src/components/default-logo.js';
+import '/src/main.js';
+import '/src/styles/style.css';
+import '/src/components/footer/footer.js';
+import '/src/components/customerService.js';
+import '/src/components/top-banner.js';
 
 
+import { setDocumentTitle, getNode, getStorage, setStorage } from 'kind-tiger';
+
+import pb from '/src/api/pocketbase';
 
 class LoginComponent extends HTMLElement {
   constructor() {
@@ -41,20 +51,16 @@ class LoginComponent extends HTMLElement {
 
   getStyle() {
     return `
-      body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Pretendard;
-      }
+      
+      
 
       .container {
+       
         text-align: center;
         max-width: 400px;
         width: 100%;
         padding: 20px;
+        margin: 0 auto;
       }
 
       h1 {
@@ -148,3 +154,47 @@ class LoginComponent extends HTMLElement {
 }
 
 customElements.define('login-component', LoginComponent);
+
+
+setDocumentTitle('마켓컬리 / 로그인');
+
+
+const tl = gsap.timeline({
+  defaults: {
+    opacity: 0,
+  }
+});
+
+tl.from('.container h1', { delay: 0.2, y: 30 })
+  .from('.container hr', { scaleX: 0 })
+  .from('form > *', { y: 30, stagger: 0.1 })
+  .from('.register', { y: -30 }, '-=0.2');
+
+
+const loginForm = document.getElementById('login-form');
+
+function handleLogin(e) {
+  e.preventDefault();
+
+  const id = getNode('#emField').value;
+  const pw = getNode('#pwField').value;
+
+  pb.collection('users').authWithPassword(id, pw)
+    .then(async () => {
+      const { model, token } = await getStorage('pocketbase_auth');
+
+      setStorage('auth', {
+        isAuth: !!model,
+        user: model,
+        token
+      });
+
+      alert('로그인 완료! 메인페이지로 이동합니다.');
+      location.href = '/index.html';
+
+    }, () => {
+      alert('인증된 사용자가 아닙니다.');
+    });
+}
+
+loginForm.addEventListener('submit', handleLogin);
