@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Popup</title>
+</head>
+<body>
+    <h2>리뷰 작성</h2>
+    <form id="reviewForm">
+        <textarea id="reviewText" rows="4" cols="50" placeholder="리뷰를 작성해주세요"></textarea>
+        <button type="submit">저장</button>
+    </form>
+    <script>
+        document.getElementById('reviewForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const reviewText = document.getElementById('reviewText').value;
+            if (reviewText) {
+                fetch('http://localhost:3000/api/reviews', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ review: reviewText }),
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                    window.opener.fetchReviews(); // 부모 창에서 리뷰 갱신
+                    window.close(); // 팝업 창 닫기
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+            } else {
+                alert('리뷰 내용을 입력해주세요.');
+            }
+        });
+    </script>
+</body>
+</html>
