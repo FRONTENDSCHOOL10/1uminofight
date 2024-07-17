@@ -6,7 +6,8 @@ class HeaderComponent extends HTMLElement {
       <style>
         .header {
           display: flex;
-          justify-content: center;
+          justify-content: flex-end;
+          margin-right: 280px;
         }
 
         .register-link {
