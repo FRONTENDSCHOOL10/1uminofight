@@ -29,6 +29,7 @@ h2 {
 .main-middle {
   width: 1050px;
   margin: 0 auto;
+  position: relative;
 }
 .main-section {
   height: 688px;
@@ -41,4 +42,9 @@ h2 {
 .line-banner {
   margin: 0 auto;
   padding: 40px 0px 40px 0px;
+}
+aside {
+position: absolute;
+left: 1350px;
+top: 150px;
 }
