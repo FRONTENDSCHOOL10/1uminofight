@@ -16,6 +16,10 @@ import '/src/components/input-text.js';
 import '/src/components/Header.js';
 import '/src/components/footer/footer.js';
 import '/src/pages/mainPage/banner.js';
+import '/src/components/cart-class.js';
+import '/src/components/cart-products.js';
+import '/src/components/cart-accordion.js';
+import '/src/components/address.js';
 import '/src/pages/login/login.js';
 
 const myHTMLTemplate = () => `
