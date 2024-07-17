@@ -1,4 +1,8 @@
 import { renderProductSlide } from '/src/components/product-slide.js';
+import '/src/components/Header.js';
+import '/src/components/footer/footer.js';
+import '/src/pages/mainPage/banner.js';
+import '/src/components/recent-view.js'
 
 // 이 상품 어때요?
 const first_products = {

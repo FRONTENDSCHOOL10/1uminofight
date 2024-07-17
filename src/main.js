@@ -7,7 +7,6 @@ import '/src/components/nav-menu-item.js';
 import '/src/components/header-category.js';
 import '/src/components/header-category-item-list.js';
 import cart from '/src/assets/images/Cart.png';
-import '/src/pages/productList/productList.js';
 import '/src/components/nav-menu.js';
 import '/src/components/header-category.js';
 import '/src/components/nav-menu.js';
@@ -21,6 +20,7 @@ import '/src/components/cart-class.js';
 import '/src/components/cart-products.js';
 import '/src/components/cart-accordion.js';
 import '/src/components/address.js';
+import '/src/pages/login/login.js';
 
 const myHTMLTemplate = () => `
 	<img src="${cart}" alt />
