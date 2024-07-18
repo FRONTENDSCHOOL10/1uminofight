@@ -1,8 +1,3 @@
-// 로그인 컴포넌트
-
-//<login-component></login-component>
-// <script src="/src/pages/login/login.js"></script>
-
 import '/src/components/Header.js';
 import '/src/components/default-logo.js';
 import '/src/main.js';
@@ -11,8 +6,7 @@ import '/src/components/footer/footer.js';
 import '/src/components/customerService.js';
 import '/src/components/top-banner.js';
 
-import { setDocumentTitle, getNode, getStorage, setStorage } from 'kind-tiger';
-
+import { setDocumentTitle, getNode, setStorage } from 'kind-tiger';
 import pb from '/src/api/pocketbase';
 
 class LoginComponent extends HTMLElement {
@@ -27,10 +21,10 @@ class LoginComponent extends HTMLElement {
       <div class="container">
         <h1>로그인</h1>
         <hr />
-        <form action="">
+        <form id="login-form">
           <div>
             <label for="emField"></label>
-            <input type="email" id="emField" placeholder="이메일를 입력해주세요" />
+            <input type="email" id="emField" placeholder="이메일을 입력해주세요" />
           </div>
           <div>
             <label for="pwField"></label>
@@ -43,18 +37,49 @@ class LoginComponent extends HTMLElement {
           </div>
           <button type="submit" class="login">로그인</button>
         </form>
-        <a href="/src/pages/register/" class="register">회원가입</a>
+        <a href="/src/pages/register/register.html" class="register">회원가입</a>
       </div>
     `;
+
+    this.loginForm = shadow.getElementById('login-form');
+    this.handleLogin = this.handleLogin.bind(this);
+  }
+
+  connectedCallback() {
+    this.loginForm.addEventListener('submit', this.handleLogin);
+  }
+
+  disconnectedCallback() {
+    this.loginForm.removeEventListener('submit', this.handleLogin);
+  }
+
+  async handleLogin(e) {
+    e.preventDefault();
+
+    const id = this.shadowRoot.getElementById('emField').value;
+    const pw = this.shadowRoot.getElementById('pwField').value;
+
+    try {
+      const authData = await pb
+        .collection('users_collection')
+        .authWithPassword(id, pw);
+
+      const userName = authData.record.name;
+      await setStorage('marketKurly_auth', {
+        isAuth: true,
+        name: userName,
+      });
+
+      alert('로그인 완료! 메인페이지로 이동합니다.');
+      location.href = '/src/pages/mainPage/mainPage.html';
+    } catch (error) {
+      alert('인증된 사용자가 아닙니다.');
+    }
   }
 
   getStyle() {
     return `
-      
-      
-
       .container {
-       
         text-align: center;
         max-width: 400px;
         width: 100%;
@@ -166,34 +191,3 @@ tl.from('.container h1', { delay: 0.2, y: 30 })
   .from('.container hr', { scaleX: 0 })
   .from('form > *', { y: 30, stagger: 0.1 })
   .from('.register', { y: -30 }, '-=0.2');
-
-const loginForm = document.getElementById('login-form');
-
-function handleLogin(e) {
-  e.preventDefault();
-
-  const id = getNode('#emField').value;
-  const pw = getNode('#pwField').value;
-
-  pb.collection('users')
-    .authWithPassword(id, pw)
-    .then(
-      async () => {
-        const { model, token } = await getStorage('pocketbase_auth');
-
-        setStorage('auth', {
-          isAuth: !!model,
-          user: model,
-          token,
-        });
-
-        alert('로그인 완료! 메인페이지로 이동합니다.');
-        location.href = '/index.html';
-      },
-      () => {
-        alert('인증된 사용자가 아닙니다.');
-      }
-    );
-}
-
-loginForm.addEventListener('submit', handleLogin);
