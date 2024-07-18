@@ -34,7 +34,7 @@ body {
     width: auto;
 }
 
-.product-detail-count-box {
+.product-detail-count-box, .total-price {
     margin-top: 20px; /* 상품 설명 아래 공간을 위해 추가 */
     width: 100%;
 }
@@ -80,26 +80,20 @@ body {
 }
 
 
-.total-price {
-	width: 500px;
-	height: 15px; 
-	padding: 28px 0; 
+.total-price-container {
 	display: flex;
-	align-items: center;
-	gap: 8px; 
+	justify-content: flex-end; /* 오른쪽 정렬 */
+	margin-right: -15px; /* 오른쪽으로 밀기 */
 }
 
 .total-price {
-    width: 100%; 
-    padding: 28px;
+    padding: 20px;
     display: flex;
-    justify-content: flex-end; 
-    margin-top: 20px; 
+    align-items: center;
+    gap: 8px; 
+	justify-content: flex-end; 
 }
 
-.total-price img {
-    margin: 0 5px; 
-}
 
 .total-price span {
     font-weight: bolder;
