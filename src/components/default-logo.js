@@ -43,6 +43,7 @@ class DefaultLogo extends HTMLElement {
       }
       .market-karly a {
         text-decoration: none;
+        color: inherit;
       }
       .beauty-karly{
         color: #898989;
