@@ -115,8 +115,9 @@ summary::-webkit-details-marker {
 .accordion {
   width: var(--accordion-width);
   position: absolute;
-  left: 18.75rem;
-  top: 16.875rem;
+  /* left: 18.75rem; */
+  left: 427px; 
+  top: 16.875rem; /*헤더 들어오면 다시 수정*/
 }
 
 .accordion ul {
@@ -213,4 +214,5 @@ summary {
 .container-wrapper {
   width: var(--default-width);
   margin: 0 auto; /* 가운데 정렬 */
+  padding-left: 270px; /*오른쪽 이동*/
 }
