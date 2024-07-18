@@ -6,7 +6,7 @@ import '/src/components/footer/footer.js';
 import '/src/components/customerService.js';
 import '/src/components/top-banner.js';
 
-import { setDocumentTitle, getNode, setStorage } from 'kind-tiger';
+import { setDocumentTitle, setStorage } from 'kind-tiger';
 import pb from '/src/api/pocketbase';
 
 class LoginComponent extends HTMLElement {
