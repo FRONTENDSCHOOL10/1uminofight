@@ -41,7 +41,7 @@ class Cart extends HTMLElement {
 
   handleClick(e) {
     e.preventDefault();
-    location.href = '/src/pages/cart.html';
+    location.href = '/src/pages/cart/cart.html';
     // cart page 만들고 이동
   }
 }

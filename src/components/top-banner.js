@@ -1,7 +1,3 @@
-// Top-banner 최상단배너 컴포넌트
-// 기능 x 버튼 누르면 사라지는 효과
-// 이슈 번호 : #00
-
 const template = document.createElement('template');
 template.innerHTML = `
   <style>
@@ -23,6 +19,8 @@ template.innerHTML = `
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
+      width: 100%;
     }
 
     .Top-banner a {
@@ -47,6 +45,7 @@ template.innerHTML = `
       border: none;
       cursor: pointer;
       position: absolute;
+      right: 400px;
       right: 300px;
     }
   </style>
@@ -84,7 +83,7 @@ class TopBanner extends HTMLElement {
     topBanner.style.opacity = '0';
 
     setTimeout(() => {
-      topBanner.classList.add('hidden');
+      topBanner.remove();
     }, 500);
   }
 
