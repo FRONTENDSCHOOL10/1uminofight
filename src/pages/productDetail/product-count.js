@@ -26,7 +26,7 @@ class ProductCount extends HTMLElement {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 84px;
+                    width: 70px;
                     height: 30px;
                     border: 1px solid #C4C4C4;
                     gap: 8px;
@@ -46,18 +46,19 @@ class ProductCount extends HTMLElement {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    font-weight: 500;
+                    font-weight: bolder;
+					font-size: 13px
                 }
             </style>
             <div class="product-count">
                 <button class="decrease-btn">
-                    <svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="8" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10 0V2H0V0H10Z" fill="#A6A6A6"/>
                     </svg>
                 </button>
                 <span class="quantity">1</span>
                 <button class="increase-btn">
-                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="8" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6 0V4H10V6H6V10H4V6H0V4H4V0H6Z" fill="#333333"/>
                     </svg>
                 </button>
