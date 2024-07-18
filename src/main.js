@@ -19,7 +19,6 @@ import '/src/pages/mainPage/banner.js';
 import '/src/components/cart-class.js';
 import '/src/components/cart-products.js';
 import '/src/components/cart-accordion.js';
-import '/src/components/address.js';
 import '/src/pages/login/login.js';
 
 const myHTMLTemplate = () => `
