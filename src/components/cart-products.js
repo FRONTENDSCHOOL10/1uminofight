@@ -24,6 +24,7 @@ class CartProducts extends HTMLElement {
     if (oldValue !== newValue) {
       if (name === 'quantity') {
         this.updateQuantity(newValue);
+        updateCartSummary();
       } else {
         this.render();
       }
@@ -134,7 +135,7 @@ class CartProducts extends HTMLElement {
       </style>
       <div class="cartproduct-container">
         <button class="check-icon" id="check-icon"><img src="/icons/CheckTrue.svg" alt="체크버튼"></button>
-        <div class="product-img"><img src="/src/assets/images/${productImage}.png" alt="제품이미지"></div>
+        <div class="product-img"><img src="/${productImage}.png" alt="제품이미지"></div>
         <div class="title-container">
           <p class="product-title">${productTitle}</p>
           <p class="product-subtitle">${subtitle}</p>

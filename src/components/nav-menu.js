@@ -43,10 +43,10 @@ class NavMenu extends HTMLElement {
 
     // 메뉴 아이템 데이터
     const menuItems = [
-      { value: '신상품', url: '/src/index.html' },
+      { value: '신상품', url: '/src/pages/mainPage/mainPage.html' },
       { value: '베스트', url: '/src/pages/productList/productList.html' },
-      { value: '알뜰쇼핑', url: '/src/index.html' },
-      { value: '특가/혜택', url: '/src/index.html' },
+      { value: '알뜰쇼핑', url: '/src/pages/mainPage/mainPage.html' },
+      { value: '특가/혜택', url: '/src/pages/mainPage/mainPage.html' },
     ];
 
     // 메뉴 아이템 생성
