@@ -66,10 +66,10 @@ class RecentViewed extends HTMLElement {
                     cursor: pointer;
                 }
                 .arrow-up {
-                    background-image: url('/public/icons/Arrow-up.svg');
+                    background-image: url('/icons/Arrow-up.svg');
                 }
                 .arrow-down {
-                    background-image: url('/public/icons/Arrow-down2.svg');
+                    background-image: url('/icons/Arrow-down2.svg');
                 }
                 .title {
                     font-size: 12px;

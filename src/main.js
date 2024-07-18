@@ -19,7 +19,7 @@ import '/src/pages/mainPage/banner.js';
 import '/src/components/cart-class.js';
 import '/src/components/cart-products.js';
 import '/src/components/cart-accordion.js';
-import '/src/pages/login/login.js';
+import '/src/components/top-banner.js';
 
 const myHTMLTemplate = () => `
 	<img src="${cart}" alt />
