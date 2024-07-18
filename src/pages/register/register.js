@@ -89,11 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!IdDuplicate && !pwError.classList.contains('is-invalid') && !pwConfirmError.classList.contains('is-invalid')) {
         // (3) 필수 약관 체크 여부 확인
         if (areRequiredCheckboxesChecked()) {
-          const userData = { email, password, passwordConfirm, username, "emailVisibility": true };
+          const userData = { email, password, passwordConfirm, name:`${username}`, "emailVisibility": true };
           pb.collection('users_collection').create(userData)
             .then(() => {
               alert('회원가입이 완료되었습니다!');
-              location.herf = '/src/pages/mainPage/mainPage.html'
+              location.href = '/src/pages/mainPage/mainPage.html';
             })
             .catch((error) => {
               alert('회원가입이 정상적으로 처리되지 않았습니다.');
