@@ -83,7 +83,7 @@ class HeaderComponent extends HTMLElement {
             <li class="divider" aria-hidden="true">|</li>
             <li class="customer-service">
               <a href="#">고객센터</a>
-              <img src="../../../public/down.png" alt="화살표" class="down-arrow">
+              <img src="../../../down.png" alt="화살표" class="down-arrow">
               <div class="customerService-info">
                 <a href="#">공지사항</a>
                 <a href="#">자주하는 질문</a>
@@ -99,7 +99,9 @@ class HeaderComponent extends HTMLElement {
 
   connectedCallback() {
     const customerService = this.shadowRoot.querySelector('.customer-service');
-    const customerServiceInfo = this.shadowRoot.querySelector('.customerService-info');
+    const customerServiceInfo = this.shadowRoot.querySelector(
+      '.customerService-info'
+    );
 
     customerService.addEventListener('mouseenter', () => {
       customerServiceInfo.style.display = 'block';
