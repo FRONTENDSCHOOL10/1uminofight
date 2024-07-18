@@ -46,7 +46,7 @@ class Banner extends HTMLElement {
       }
     </style>
     <div class="main-banner-wrapper">
-      <img src="/src/assets/images/banner05.png" class="main-banner" alt="특가/혜택 관련 배너">
+      <img src="/banner05.png" class="main-banner" alt="특가/혜택 관련 배너">
       <img src="/arrow-left.png" role="button" class="prev-button main-banner-button" alt="배너 prev 버튼">
       <img src="/arrow-right.png" role="button" class="next-button main-banner-button" alt="배너 next 버튼">    
     </div>
