@@ -3,18 +3,136 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>product detail</title>
-    <link rel="stylesheet" href="/src/styles/style.css" />
-    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <title>상품리스트 페이지</title>
     <link rel="stylesheet" href="/src/pages/productList/productList.css" />
-    <script type="module" src="/src/main.js"></script>
     <script type="module" src="/src/pages/productList/productList.js"></script>
   </head>
   <body>
-    <h2>베스트</h2>
-    <div class="product-slide-container best-products">
-      <ul></ul>
-      <numbering-container id="svg-container"></numbering-container>
+    <c-header></c-header>
+
+    <div class="container-wrapper">
+      <div class="accordion category">
+        <summary> 
+          <span id="accordion-top-title">필터</span>
+          <span id="filter-reset">초기화</span>          
+        </summary>
+       <details open>
+         <summary> 
+           <span id="accordion-top-title">카테고리 <span class="small-num">1</span></span>
+           <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+             <path d="M5 7L9 11L13 7" stroke="#999999" stroke-width="1.2"/>
+             </svg>          
+         </summary>
+         <div class="accordion-body">
+           <ul>
+             <li>
+               <input type="checkbox" id="salad" />
+               <label for="salad">샐러드 · 간편식 <span class="small-num">65</span></label>
+             </li>
+             <li>
+               <input type="checkbox" id="soup-dish" />
+               <label for="soup-dish">국 · 반찬 · 메인요리 <span class="small-num">52</span></label>
+             </li>
+             <li>
+               <input type="checkbox" id="meat-egg" />
+               <label for="meat-egg">정육 · 계란 <span class="small-num">41</span></label>
+             </li>
+             <li>
+               <input type="checkbox" id="fruit-nut-rice" />
+               <label for="fruit-nut-rice">과일 · 견과 · 쌀 <span class="small-num">30</span></label>
+             </li>
+             <li>
+               <input type="checkbox" id="snack" />
+               <label for="snack">간식 · 과자 · 떡 <span class="small-num">18</span></label>
+             </li>
+             <li>
+               <input type="checkbox" id="beverage" />
+               <label for="beverage">생수 · 음료 · 우유 · 커피 <span class="small-num">17</span></label>
+             </li>
+             <li>
+               <input type="checkbox" id="sea-food" />
+               <label for="sea-food">수산 · 해산 · 건어물 <span class="small-num">16</span></label>
+             </li>
+             <li>
+               <input type="checkbox" id="bakery" />
+               <label for="bakery">베이커리 · 치즈 · 델리 <span class="small-num">13</span></label>
+             </li>
+             <li>
+               <input type="checkbox" id="health" />
+               <label for="health">건강식품 <span class="small-num">10</span></label>
+             </li>
+             <li>
+               <input type="checkbox" id="living" />
+               <label for="living">생활용품 · 리빙 · 캠핑 <span class="small-num">10</span></label>
+             </li>
+           </ul>
+         </div>
+       </details>
+       <summary> 
+        <span id="accordion-top-title">브랜드</span>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 7L9 11L13 7" stroke="#999999" stroke-width="1.2"/>
+          </svg>          
+      </summary>
+      <summary> 
+        <span id="accordion-top-title">가격</span>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 7L9 11L13 7" stroke="#999999" stroke-width="1.2"/>
+          </svg>          
+      </summary>
+      <summary> 
+        <span id="accordion-top-title">혜택</span>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 7L9 11L13 7" stroke="#999999" stroke-width="1.2"/>
+          </svg>          
+      </summary>
+      <summary> 
+        <span id="accordion-top-title">유형</span>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 7L9 11L13 7" stroke="#999999" stroke-width="1.2"/>
+          </svg>          
+      </summary>
+      <summary> 
+        <span id="accordion-top-title">특정상품 제외</span>
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 7L9 11L13 7" stroke="#999999" stroke-width="1.2"/>
+          </svg>          
+      </summary>
+
+      </div>
+     
+       <section role="main" class="product-list-wrapper">
+         <div class="title-container">
+           <h2>베스트</h2>
+         </div>
+         <div class="product-list-sort-wrapper" role="group">
+           <span id="sort-list-title">총 45건</span>
+           <span class="sort-list">
+             <button  type="button" id="sort-recommendation">추천순</button>
+             <span><img src="/product-list-bar.png"></span>
+             <button  type="button">신상품순</button>
+             <span><img src="/product-list-bar.png"></span>
+             <button  type="button">판매량순</button>
+             <span><img src="/product-list-bar.png"></span>
+             <button  type="button">혜택순</button>
+             <span><img src="/product-list-bar.png"></span>
+             <button  type="button">낮은 가격순</button>
+             <span><img src="/product-list-bar.png"></span>
+             <button  type="button">높은 가격순</button>
+           </span>
+         </div>
+     
+         <div class="product-slide-container best-products">
+           <ul></ul>
+           <numbering-container id="svg-container"></numbering-container>
+         </div>
+     
+       </section>
     </div>
+
+
+    <!-- <footer>
+      <footer-component></footer-component>
+    </footer> -->
   </body>
 </html>

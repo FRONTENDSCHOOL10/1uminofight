@@ -93,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
           pb.collection('users_collection').create(userData)
             .then(() => {
               alert('회원가입이 완료되었습니다!');
+              location.herf = '/src/pages/mainPage/mainPage.html'
             })
             .catch((error) => {
               alert('회원가입이 정상적으로 처리되지 않았습니다.');
@@ -102,6 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       } else {
         console.log("Validation failed");
+        alert('회원가입이 정상적으로 처리되지 않았습니다.');
       }
     }
   });
