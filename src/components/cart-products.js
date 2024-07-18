@@ -24,7 +24,6 @@ class CartProducts extends HTMLElement {
     if (oldValue !== newValue) {
       if (name === 'quantity') {
         this.updateQuantity(newValue);
-        updateCartSummary(); // quantity 변경 시마다 전체 가격 업데이트
       } else {
         this.render();
       }

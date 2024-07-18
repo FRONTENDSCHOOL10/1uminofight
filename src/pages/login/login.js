@@ -179,7 +179,7 @@ class LoginComponent extends HTMLElement {
 
 customElements.define('login-component', LoginComponent);
 
-setDocumentTitle('마켓컬리 / 로그인');
+setDocumentTitle('로그인 - 컬리');
 
 const tl = gsap.timeline({
   defaults: {
