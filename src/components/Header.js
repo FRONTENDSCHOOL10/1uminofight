@@ -9,8 +9,41 @@ class Header extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
     <style>
+      .header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+      .top-header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        width: 1050px;
+        height: 35px;
+        align-items: center;
+      }
+      .header-link {
+        text-decoration: none;
+        color: #333;
+        font-size: 12px;
+        margin-left: 15px;
+        position: relative;
+        padding: 0 10px;
+      }
+      .header-link:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        right: -10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 14px;
+        background-color: #ccc;
+      }
       .middle-header {
         width: 1050px;
+        height: 63px;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
@@ -27,7 +60,7 @@ class Header extends HTMLElement {
       }
       .bottom-header{
         width: 1050px;
-        height: 72px;
+        height: 56px;
         margin: 0 auto;
         display: flex;
         flex-flow: row nowrap;
@@ -48,31 +81,45 @@ class Header extends HTMLElement {
       .delivery-info-first{
         color: #5F0080;
       }
+      .bottom-shadow {
+        width: 100%;
+        height: 2px;
+        background: rgba(0, 0, 0, 0.1); 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        left: 0;
+      }
     </style>
 
-    <div class="middle-header">
-
-    <span class="logo-search">
-    <default-logo></default-logo>
-    <input-search-container label="검색어를 입력해주세요"></input-search-container>
-    </span>
-     
-      <span class="default-icon">
-        <cart-icon></cart-icon> <!-- location 아이콘 들어와야함. -->
-        <cart-icon></cart-icon>
-        <default-icon-heart></default-icon-heart>    
-      </span>
+    <div class="header-container">
+      <top-banner></top-banner>
+      <div class="top-header">
+        <a href="/src/pages/register/register.html" class="header-link">회원가입</a>
+        <a href="/src/pages/login/login.html" class="header-link">로그인</a>
+        <a href="#" class="header-link">고객센터</a>
+      </div>
+      <div class="middle-header">
+        <span class="logo-search">
+          <default-logo></default-logo>
+          <input-search-container label="검색어를 입력해주세요"></input-search-container>
+        </span>
+      
+        <span class="default-icon">
+          <div><img src="/public/icons/Location.svg" alt="icon"></div>
+          <cart-icon></cart-icon>
+          <default-icon-heart></default-icon-heart>
+        </span>
+      </div>
+      <div class="bottom-header">
+        <header-category></header-category>
+        <nav-menu></nav-menu>
+        <span class="delivery-info">
+          <span class="delivery-info-first"> 샛별·낮 </span>
+          <span class="delivery-info-last"> 배송안내</span>
+        </span>
+      </div>
     </div>
-
-    <div class="bottom-header">
-    <header-category></header-category>
-    <nav-menu></nav-menu>
-    <span class="delivery-info">
-      <span class="delivery-info-first"> 샛별·낮 </span>
-      <span class="delivery-info-last"> 배송안내</span>
-    </span>
-    </div>
-    
+    <div class="bottom-shadow"></div>
     `;
   }
 }
