@@ -20,7 +20,6 @@ import '/src/components/cart-class.js';
 import '/src/components/cart-products.js';
 import '/src/components/cart-accordion.js';
 import '/src/components/top-banner.js';
-import '/src/pages/login/login.js';
 
 const myHTMLTemplate = () => `
 	<img src="${cart}" alt />
