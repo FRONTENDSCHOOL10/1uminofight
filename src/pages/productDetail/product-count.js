@@ -2,10 +2,8 @@ class ProductCount extends HTMLElement {
 	constructor() {
 		super();
 		
-		// Shadow DOM 초기화
 		this.attachShadow({ mode: 'open' });
 		
-		// 초기 HTML 구조 및 스타일 설정
 		this.shadowRoot.innerHTML = `
 			<style>
 				.product-count {
@@ -52,18 +50,15 @@ class ProductCount extends HTMLElement {
 			</div>
 		`;
 
-		// 요소 참조
 		this.decreaseBtn = this.shadowRoot.querySelector('.decrease-btn');
 		this.increaseBtn = this.shadowRoot.querySelector('.increase-btn');
 		this.quantity = this.shadowRoot.querySelector('.quantity');
 	}
 
 	connectedCallback() {
-		// 초기 값 설정
 		this.initialValue = parseInt(this.getAttribute('data-initial-value')) || 1;
 		this.quantity.textContent = this.initialValue;
 
-		// 이벤트 리스너 설정
 		this.decreaseBtn.addEventListener('click', this.decrease.bind(this));
 		this.increaseBtn.addEventListener('click', this.increase.bind(this));
 	}
@@ -90,7 +85,6 @@ class ProductCount extends HTMLElement {
 	}
 }
 
-// 커스텀 엘리먼트 등록
 customElements.define('product-count', ProductCount);
 
 document.addEventListener('DOMContentLoaded', function() {

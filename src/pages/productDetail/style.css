@@ -10,11 +10,11 @@ body {
 
 .container {
     display: flex;
-	align-items: flex-start; /* 위로 정렬 */
+	align-items: flex-start;
     justify-content: space-between;
     width: 1050px;
     height: 1021px;
-    margin: 0 auto; /* 화면 중앙에 고정 */
+    margin: 0 auto; 
     box-sizing: border-box;
 	padding-top: 20px; 
 }
@@ -24,7 +24,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; /* 수직 정렬을 위해 추가 */
+    flex-direction: column; 
 }
 
 .left img, .right img {
@@ -35,7 +35,7 @@ body {
 }
 
 .product-detail-count-box, .total-price {
-    margin-top: 20px; /* 상품 설명 아래 공간을 위해 추가 */
+    margin-top: 20px; 
     width: 100%;
 }
 
@@ -50,13 +50,13 @@ body {
     font-weight: bold;
     margin-right: 70px;
     color: #6B6B6B;
-	white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+	white-space: nowrap; 
 }
 
 .product-selection {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 90px); /* Adjust width considering the width of '상품선택' span */
+    width: calc(100% - 90px); 
     padding: 10px;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -79,11 +79,12 @@ body {
     flex: 1;
 }
 
-
 .total-price-container {
-	display: flex;
-	justify-content: flex-end; /* 오른쪽 정렬 */
-	margin-right: -15px; /* 오른쪽으로 밀기 */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
 }
 
 .total-price {
@@ -104,10 +105,12 @@ body {
 
 .heart-incart {
     display: flex;
-    justify-content: flex-start;
     width: 100%; 
     margin-top: 20px;
-	gap: 12px
+	gap: 12px;
+	flex: 1;
+	justify-content: flex-end; 
+	cursor: pointer;
 }
 
 
