@@ -13,6 +13,7 @@ class CartProducts extends HTMLElement {
     return [
       'product-image',
       'product-title',
+      'subtitle',
       'quantity',
       'regular-price',
       'discount-price',
@@ -20,11 +21,13 @@ class CartProducts extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    if (oldValue !== newValue && name !== 'quantity') {
-      this.render();
-      this.addEventListeners();
-    } else if (name === 'quantity') {
-      this.updateQuantity(newValue);
+    if (oldValue !== newValue) {
+      if (name === 'quantity') {
+        this.updateQuantity(newValue);
+        updateCartSummary(); // quantity 변경 시마다 전체 가격 업데이트
+      } else {
+        this.render();
+      }
     }
   }
 
@@ -33,8 +36,15 @@ class CartProducts extends HTMLElement {
     const productTitle = this.getAttribute('product-title');
     const subtitle = this.getAttribute('subtitle');
     const quantity = parseInt(this.getAttribute('quantity'));
-    const regularPrice = this.getAttribute('regular-price');
-    const discountPrice = this.getAttribute('discount-price');
+    const regularPrice = this.getAttribute('regular-price')
+      ? parseInt(this.getAttribute('regular-price').replace(/[^0-9]/g, ''))
+      : null;
+    const discountPrice = parseInt(
+      this.getAttribute('discount-price').replace(/[^0-9]/g, '')
+    );
+
+    const totalRegularPrice = regularPrice ? regularPrice * quantity : null;
+    const totalDiscountPrice = discountPrice * quantity;
 
     this.shadowRoot.innerHTML = `
       <style>
@@ -53,7 +63,6 @@ class CartProducts extends HTMLElement {
           margin-right: 30px;
           margin-left: 20px;
         }
-
         .product-img img {
           max-width: 70px;
           max-height: 100px;
@@ -99,6 +108,7 @@ class CartProducts extends HTMLElement {
         }
         .price {
           margin-right: 20px;
+          white-space: nowrap;
         }
         .discount-price {
           font-weight: bold;
@@ -136,10 +146,10 @@ class CartProducts extends HTMLElement {
           <button class="quantity-btn" id="increase-btn">+</button>
         </div>
         <div class="price">
-          <p class="discount-price">${discountPrice}</p>
-          <p class="regular-price">${regularPrice}</p>
+          <p class="discount-price" id="discount-price">${this.formatPrice(totalDiscountPrice)}원</p>
+          ${totalRegularPrice !== null ? `<p class="regular-price" id="regular-price">${this.formatPrice(totalRegularPrice)}원</p>` : ''}
         </div>
-        <button class="close" type="button">
+        <button class="close" id="close-btn" type="button">
           <img src="/public/icons/Close.svg" alt="닫기 버튼">
         </button>
       </div>
@@ -152,9 +162,9 @@ class CartProducts extends HTMLElement {
     const checkIconBtn = this.shadowRoot
       .getElementById('check-icon')
       .querySelector('img');
-    let quantity = parseInt(this.getAttribute('quantity'));
 
     decreaseBtn.addEventListener('click', () => {
+      let quantity = parseInt(this.getAttribute('quantity'));
       if (quantity > 0) {
         quantity--;
         this.setAttribute('quantity', quantity);
@@ -162,6 +172,7 @@ class CartProducts extends HTMLElement {
     });
 
     increaseBtn.addEventListener('click', () => {
+      let quantity = parseInt(this.getAttribute('quantity'));
       quantity++;
       this.setAttribute('quantity', quantity);
     });
@@ -173,7 +184,27 @@ class CartProducts extends HTMLElement {
 
   updateQuantity(newQuantity) {
     const quantityElement = this.shadowRoot.getElementById('quantity');
+    const regularPrice = this.getAttribute('regular-price')
+      ? parseInt(this.getAttribute('regular-price').replace(/[^0-9]/g, ''))
+      : null;
+    const discountPrice = parseInt(
+      this.getAttribute('discount-price').replace(/[^0-9]/g, '')
+    );
+
+    const totalRegularPrice = regularPrice ? regularPrice * newQuantity : null;
+    const totalDiscountPrice = discountPrice * newQuantity;
+
     quantityElement.textContent = newQuantity;
+    if (totalRegularPrice !== null) {
+      this.shadowRoot.getElementById('regular-price').textContent =
+        `${this.formatPrice(totalRegularPrice)}원`;
+    }
+    this.shadowRoot.getElementById('discount-price').textContent =
+      `${this.formatPrice(totalDiscountPrice)}원`;
+  }
+
+  formatPrice(price) {
+    return price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   }
 }
 

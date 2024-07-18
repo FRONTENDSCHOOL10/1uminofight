@@ -1,4 +1,6 @@
 import { renderProductSlide } from '/src/components/product-slide.js';
+import '/src/components/Header.js';
+import '/src/components/footer/footer.js';
 
 // 베스트 상품리스트
 const best_products = {
