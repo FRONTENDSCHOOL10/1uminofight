@@ -54,7 +54,7 @@ export async function renderProductSlide({ collection, node, sort }) {
     const template = `
     <li class="product-item">
     <figure>
-    <a href="${isAuth ? `/src/pages/detail/index.html?product=${item.id}` : '/src/pages/login/login.html'}">
+    <a href="/src/pages/productDetail/index.html">
       <img src="${getPbImageURL(item)}" alt="${item.name}" />
     </a>
 
@@ -97,27 +97,11 @@ export async function renderProductSlide({ collection, node, sort }) {
   </figure>
   </li>
   `;
-    /*
-    const karly_only = document.querySelector('.karly_only');
-    const limited_amount = document.querySelector('.limited-amount');
-
-    if (item.karly_only) karly_only.classList.add('is-active');
-    if (item.limited_amount) karly_only.classList.add('limited');
-*/
     insertLast(node, template);
   });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // const productSlideContainer = document.querySelector(
-  //   '.product-slide-container > ul'
-  // );
-  // if (productSlideContainer) {
-  //   renderProductSlide(productSlideContainer);
-  // } else {
-  //   console.error('Product slide container element not found.');
-  // }
-
   document
     .querySelector('.product-container-slide')
     ?.addEventListener('click', () => {

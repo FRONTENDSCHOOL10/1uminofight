@@ -106,7 +106,7 @@ summary::-webkit-details-marker {
   position: absolute;
   /* left: 18.75rem; */
   left: 427px; 
-  top: 16.875rem; /*헤더 들어오면 다시 수정*/
+  top: 20.5rem; /*헤더 들어오면 다시 수정*/
 }
 
 .accordion ul {
