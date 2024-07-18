@@ -105,7 +105,7 @@ class Header extends HTMLElement {
         </span>
       
         <span class="default-icon">
-          <div><img src="/public/icons/Location.svg" alt="icon"></div>
+          <div><img src="/icons/Location.svg" alt="icon"></div>
           <cart-icon></cart-icon>
           <default-icon-heart></default-icon-heart>
         </span>
