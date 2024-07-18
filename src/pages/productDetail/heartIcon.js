@@ -1,3 +1,15 @@
+/*
+Icon/Heart 컴포넌트
+기능 
+- 하트 클릭 시 색상 변경
+사용 페이지 : 상품 상세페이지
+이슈번호 : #33
+
+cf. 
+- html 사용
+	<heart-icon></heart-icon>
+*/
+
 class HeartIcon extends HTMLElement {
     constructor() {
         super();

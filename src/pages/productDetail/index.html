@@ -23,30 +23,68 @@
 			</div>
 
 			<div class="product-detail-count-box">
-                <div class="product-selection-row">
-                    <span>상품선택</span>
-                    <div class="product-selection">
-                        <span class="product-name">[풀무원] 탱탱쫄면 (4개입)</span>
-                        <div class="quantity-price-row">
-                            <div class="quantity-control">
-                            	<product-count data-initial-value="1"></product-count>
-                            </div>
-								<span class="price">4,980원</span>
-                        </div>
-                    </div>
-                </div>
-			</div>	
-			
-
-			<div class="total-price">
-				<img src="/src/assets/images/totalprice.svg" alt="총 상품금액">
-				<span id="totalPrice">4,980</span>
-				<img src="/src/assets/images/won.svg" alt="원">
+				<div class="product-selection-row">
+					<span>상품선택</span>
+					<div class="product-selection">
+						<span class="product-name">[풀무원] 탱탱쫄면 (4개입)</span>
+						<div class="quantity-price-row">
+							<div class="quantity-control">
+								<product-count data-initial-value="1"></product-count>
+							</div>
+							<span class="price" id="price">4,980원</span>
+						</div>
+					</div>
+				</div>
+				<div class="total-price-container">
+					<div class="total-price">
+						<img src="/src/assets/images/totalprice.svg" alt="총 상품금액">
+						<span id="total-price">4,980</span>
+						<img src="/src/assets/images/won.svg" alt="원">
+					</div>
+				</div>
 			</div>
-
+		
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					const pricePerItem = 4980;
+					const quantityInput = document.getElementById('quantity');
+					const totalPriceSpan = document.getElementById('total-price');
+		
+					function updateTotalPrice() {
+						const quantity = parseInt(quantityInput.value);
+						const totalPrice = pricePerItem * quantity;
+						totalPriceSpan.textContent = `${totalPrice.toLocaleString()}`;
+					}
+		
+					document.getElementById('decrease').addEventListener('click', function() {
+						let quantity = parseInt(quantityInput.value);
+						if (quantity > 1) {
+							quantityInput.value = quantity - 1;
+							updateTotalPrice();
+						}
+					});
+		
+					document.getElementById('increase').addEventListener('click', function() {
+						let quantity = parseInt(quantityInput.value);
+						quantityInput.value = quantity + 1;
+						updateTotalPrice();
+					});
+		
+					quantityInput.addEventListener('input', function() {
+						if (quantityInput.value < 1) {
+							quantityInput.value = 1;
+						}
+						updateTotalPrice();
+					});
+		
+					updateTotalPrice();
+				});
+			</script>
+			
 			<div class="heart-incart">
 			<heart-icon></heart-icon>
 			<img src="/src/assets/images/bell.svg" alt="알림">
+			<img src="/src/assets/images/incart.svg" alt="장바구니 담기">
 			</div>
         </div>
 	</div>
@@ -102,6 +140,7 @@
 		</div>
 		</div>
 		<div class="product-review-detail">
+			<img src="/src/assets/images/noreview.svg" alt="상품후기 리스트">
 			<img src="/src/assets/images/review-pagenation.svg" alt="상품후기 페이지버튼" class="clickable">
 		</div>
 		<div class="product-inquiry">
@@ -115,6 +154,7 @@
 			</script>
 		</div>
 		<div class="product-inquiry-detail">
+			<img src="/src/assets/images/inquirylist.svg" alt="상품문의 리스트">
 			<img src="/src/assets/images/review-pagenation.svg" alt="상품문의 페이지버튼" class="clickable">
 		</div>
 

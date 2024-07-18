@@ -26,8 +26,8 @@
                 .then(response => response.json())
                 .then(data => {
                     alert(data.message);
-                    window.opener.fetchReviews(); // 부모 창에서 리뷰 갱신
-                    window.close(); // 팝업 창 닫기
+                    window.opener.fetchReviews();
+                    window.close();
                 })
                 .catch(error => {
                     console.error('Error:', error);
