@@ -1,0 +1,111 @@
+body {
+	font-family: 'Pretendard', sans-serif;
+}
+
+.popup {
+	width: 793px;
+	height: 670px;
+	border-radius: 16px;
+	padding: 32px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	background-color: white;
+}
+
+.productreview {
+	display: flex;
+	align-items: center;
+	border-top: 2px solid #E1E1E1;
+	border-bottom: 2px solid #E1E1E1;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+
+.productreview img {
+	margin-right: 16px;
+}
+
+.productreview p {
+	margin: 0;
+	font-weight: bold;
+}
+
+#reviewForm button {
+    width: 186px;
+    height: 54px;
+    border-radius: 4px;
+	border: none;
+	cursor: pointer;
+}
+
+#reviewForm {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px; 
+	border-top: 2px solid #E1E1E1;
+	padding-top: 25px;
+}
+
+#reviewForm button[type="submit"] {
+	color: #FFFFFF;
+	background-color: #E1E1E1;
+}
+
+#reviewForm button[type="cancle"] {
+	color: #333333;
+}
+
+.input-container{
+    width: 629px;
+    box-sizing: border-box; /* padding을 포함한 크기 조정 */
+    margin-bottom: 16px;
+}
+
+.content-container {
+    width: 629px;
+    box-sizing: border-box; /* padding을 포함한 크기 조정 */
+    margin-bottom: 50px;
+}
+
+.input-container {
+    width: 793px;
+	height: 44px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-sizing: border-box; /* padding을 포함한 크기 조정 */
+}
+
+#title-content {
+    width: 100%;
+    height: 100%;
+    border: none;
+    resize: none; 
+    box-sizing: border-box;
+    padding: 4px; 
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.content-container {
+    width: 793px;
+    height: 198px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box; /* padding을 포함한 크기 조정 */
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    border: none;
+    resize: none; /* 크기 조정 불가 */
+    overflow-y: scroll; /* 스크롤 기능 추가 */
+    box-sizing: border-box;
+    padding: 4px; /* 내부 여백 추가 */
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
