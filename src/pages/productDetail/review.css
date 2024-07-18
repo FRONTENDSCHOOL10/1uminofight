@@ -1,0 +1,19 @@
+/* review.css 파일에 추가 */
+#reviewForm button {
+    width: 186px;
+    height: 54px;
+    border-radius: 4px;
+	border: none;
+}
+
+/* 등록 버튼 스타일 */
+#reviewForm button[type="submit"] {
+	color: #FFFFFF;
+	background-color: E1E1E1;;
+}
+
+/* 취소 버튼 스타일 */
+#reviewForm button[type="button"] {
+	color: #FFFFFF;
+	background-color:transparent;
+}

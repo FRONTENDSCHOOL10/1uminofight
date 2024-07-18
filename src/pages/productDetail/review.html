@@ -4,38 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Popup</title>
+	<link rel="stylesheet" href="/src/pages/productDetail/review.css">
+	<script type="module" src="/src/pages/productDetail/product-Detail.js"></script>
 </head>
 <body>
     <h2>리뷰 작성</h2>
-    <form id="reviewForm">
-        <textarea id="reviewText" rows="4" cols="50" placeholder="리뷰를 작성해주세요"></textarea>
-        <button type="submit">저장</button>
+	<div class="title">
+	<h3>제목</h3>
+	<input-text-container label="제목을 입력해 주세요"></input-text-container>
+	</div>
+	<form id="reviewForm">
+		<button type="cancle">취소</button>
+        <button type="submit">등록</button>
     </form>
-    <script>
-        document.getElementById('reviewForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const reviewText = document.getElementById('reviewText').value;
-            if (reviewText) {
-                fetch('http://localhost:3000/api/reviews', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ review: reviewText }),
-                })
-                .then(response => response.json())
-                .then(data => {
-                    alert(data.message);
-                    window.opener.fetchReviews();
-                    window.close();
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-            } else {
-                alert('리뷰 내용을 입력해주세요.');
-            }
-        });
-    </script>
 </body>
 </html>
