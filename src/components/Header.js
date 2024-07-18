@@ -242,10 +242,6 @@ document.addEventListener('DOMContentLoaded', async function () {
 
   try {
     const authData = await getStorage('marketKurly_auth');
-    console.log(authData);
-    console.log(authData.isAuth);
-    console.log(authData.name);
-
     const loggedOutDiv = shadowRoot.getElementById('logged-out');
     const loggedInDiv = shadowRoot.getElementById('logged-in');
     const usernameLink = shadowRoot.getElementById('username-link');

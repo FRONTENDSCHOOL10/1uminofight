@@ -76,9 +76,9 @@ class DefaultLogo extends HTMLElement {
       </svg></a>
 
       <div class="switch-bar">
-        <span class="market-karly"><a href="/src/index.html">마켓컬리</a></span>
+        <span class="market-karly"><a href="/src/pages/mainPage/mainPage.html">마켓칼리</a></span>
         <span aria-hidden="true"><img src="/default-switch-bar.png" alt="스위치 바" /></span>
-        <span class="beauty-karly">뷰티컬리</span>
+        <span class="beauty-karly">뷰티칼리</span>
       </div>
 
       <img class="beauty-karly-new" src="/beauty-karly-new.png" alt="뷰티칼리 new 아이콘">

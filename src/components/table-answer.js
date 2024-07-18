@@ -46,7 +46,7 @@ class TableAnswer extends HTMLElement {
             display: block;
         }    
         .qa-text {
-            font-size: 12px;
+            font-size: 14px;
             flex: 1;
         }
         .question-container, .answer-container {
@@ -64,6 +64,7 @@ class TableAnswer extends HTMLElement {
         .question, .answer {
             margin: 0px;
             font-weight: 600;
+            line-height: 1.7;
         }
     </style>
 

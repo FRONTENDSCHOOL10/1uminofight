@@ -24,7 +24,6 @@ class CartProducts extends HTMLElement {
     if (oldValue !== newValue) {
       if (name === 'quantity') {
         this.updateQuantity(newValue);
-        updateCartSummary();
       } else {
         this.render();
       }
@@ -158,10 +157,6 @@ class CartProducts extends HTMLElement {
 
   addEventListeners() {
     const decreaseBtn = this.shadowRoot.getElementById('decrease-btn');
-    const increaseBtn = this.shadowRoot.getElementById('increase-btn');
-    const checkIconBtn = this.shadowRoot
-      .getElementById('check-icon')
-      .querySelector('img');
 
     decreaseBtn.addEventListener('click', () => {
       let quantity = parseInt(this.getAttribute('quantity'));
@@ -175,10 +170,6 @@ class CartProducts extends HTMLElement {
       let quantity = parseInt(this.getAttribute('quantity'));
       quantity++;
       this.setAttribute('quantity', quantity);
-    });
-
-    $(checkIconBtn).on('click', function () {
-      changeCheckState(checkIconBtn);
     });
   }
 
@@ -209,11 +200,3 @@ class CartProducts extends HTMLElement {
 }
 
 customElements.define('cart-products', CartProducts);
-
-function changeCheckState(checkIcon) {
-  if (checkIcon.src.includes('CheckTrue.svg')) {
-    checkIcon.src = '/icons/CheckFalse.svg';
-  } else {
-    checkIcon.src = '/icons/CheckTrue.svg';
-  }
-}
