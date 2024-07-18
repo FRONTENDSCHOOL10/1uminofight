@@ -130,6 +130,7 @@ body {
 
 
 .usetab-button {
+	font-family: 'Pretendard', sans-serif;
     width: 263.25px;
     height: 54px;
     background-color: #ffffff;
@@ -145,6 +146,7 @@ body {
 }
 
 .tab-button {
+	font-family: 'Pretendard', sans-serif;
     width: 263.25px;
     height: 54px;
     background-color: #F9F9F9;
@@ -154,9 +156,8 @@ body {
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s;
     color: #333333;
-    margin-right: -1px; /* Remove space between buttons by overlapping borders */
+    margin-right: -1px; 
 }
-
 
 
 .product-description {
