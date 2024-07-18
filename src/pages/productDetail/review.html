@@ -8,14 +8,28 @@
 	<script type="module" src="/src/pages/productDetail/product-Detail.js"></script>
 </head>
 <body>
-    <h2>리뷰 작성</h2>
-	<div class="title">
-	<h3>제목</h3>
-	<input-text-container label="제목을 입력해 주세요"></input-text-container>
-	</div>
-	<form id="reviewForm">
-		<button type="cancle">취소</button>
-        <button type="submit">등록</button>
-    </form>
+	<div class="popup">
+		<h1>후기 작성</h1>
+		<div class="productreview">
+			<img src="/src/assets/images/productreview.svg" alt="상품 설명 상단">
+			<p>[풀무원] 탱탱쫄면 (4개입)</p>
+		</div>
+		<div class="title">
+		   <h3>제목</h3>
+			<div class="input-container">
+				<textarea id="title-content" placeholder="제목을 입력해 주세요"></textarea>
+			</div>
+			<h3>내용</h3>
+			<div class="content-container">
+				<textarea id="content" placeholder="컬리는 믿을 수 있는 후기문화를 함께 만들어가고자 합니다. 
+식품 등의 표시광고에 대한 법률을 준수하고자 다음과 같은 부당한 상품평에 대해서는 별도 고지 없이 임시 대처, 비공개 전환, 삭제, 적립금 회수 등의 필요한 조치가 취해 질 수 있습니다."></textarea>
+			</div>
+		</div>
+        <form id="reviewForm">
+            <button type="cancle">취소</button>
+            <button type="submit">등록</button>
+        </form>
+    </div>
+	
 </body>
 </html>
