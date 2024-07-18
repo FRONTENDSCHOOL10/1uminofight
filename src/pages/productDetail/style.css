@@ -117,7 +117,6 @@ body {
 .button-box {
 	width: 1050px;
 	margin: 0 auto;
-	margin-top: 50px;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;

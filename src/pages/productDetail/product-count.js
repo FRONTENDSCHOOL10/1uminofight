@@ -1,3 +1,14 @@
+/*
+product_count 컴포넌트
+기능 
+- 수량 변경 버튼, [-,+] 클릭에 따라 수량 변경
+사용 페이지 : 상품 상세페이지
+이슈번호 : #32
+
+cf. 
+- html 사용
+<product-count data-initial-value="1"></product-count>
+*/
 class ProductCount extends HTMLElement {
 	constructor() {
 		super();
