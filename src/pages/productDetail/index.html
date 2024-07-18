@@ -1,168 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Count Page</title>
-	<script type="module" src="/src/pages/productDetail/product-Detail.js"></script>
-	<link rel="stylesheet" href="/src/pages/productDetail/style.css">
-</head>
-<body>
-	<top-banner></top-banner>
-	<c-header></c-header>
-	<div class="gradient-border"></div>
-	<div class="container">
-        <div class="left">
-            <img src="/src/assets/images/product-detail.svg" alt="상품 이미지">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[풀무원] 탱탱쫄면 (4개입) - 마켓컬리</title>
+    <link rel="icon" type="image/x-icon" href="/public/kurly.png" />
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <script
+      type="module"
+      src="/src/pages/productDetail/product-Detail.js"
+    ></script>
+    <link rel="stylesheet" href="/src/pages/productDetail/style.css" />
+  </head>
+  <body>
+    <h1 class="sr-only">마켓칼리 장바구니 페이지</h1>
+    <c-header></c-header>
+    <div class="gradient-border"></div>
+    <div class="container">
+      <div class="left">
+        <img src="/src/assets/images/product-detail.svg" alt="상품 이미지" />
+      </div>
+
+      <div class="right">
+        <div class="product-detail">
+          <img src="/src/assets/images/top-text.svg" alt="상품 설명 상단" />
+          <img src="/src/assets/images/middle-text.svg" alt="상품 설명 중간" />
         </div>
 
-        <div class="right">
-            <div class="product-detail">
-                <img src="/src/assets/images/top-text.svg" alt="상품 설명 상단">
-                <img src="/src/assets/images/middle-text.svg" alt="상품 설명 중간">
-			</div>
-
-			<div class="product-detail-count-box">
-				<div class="product-selection-row">
-					<span>상품선택</span>
-					<div class="product-selection">
-						<span class="product-name">[풀무원] 탱탱쫄면 (4개입)</span>
-						<div class="quantity-price-row">
-							<div class="quantity-control">
-								<product-count data-initial-value="1"></product-count>
-							</div>
-							<span class="price" id="price">4,980원</span>
-						</div>
-					</div>
-				</div>
-				<div class="total-price-container">
-					<div class="total-price">
-						<img src="/src/assets/images/totalprice.svg" alt="총 상품금액">
-						<span id="total-price">4,980</span>
-						<img src="/src/assets/images/won.svg" alt="원">
-					</div>
-				</div>
-			</div>
-		
-			<script>
-				document.addEventListener('DOMContentLoaded', function() {
-					const pricePerItem = 4980;
-					const quantityInput = document.getElementById('quantity');
-					const totalPriceSpan = document.getElementById('total-price');
-		
-					function updateTotalPrice() {
-						const quantity = parseInt(quantityInput.value);
-						const totalPrice = pricePerItem * quantity;
-						totalPriceSpan.textContent = `${totalPrice.toLocaleString()}`;
-					}
-		
-					document.getElementById('decrease').addEventListener('click', function() {
-						let quantity = parseInt(quantityInput.value);
-						if (quantity > 1) {
-							quantityInput.value = quantity - 1;
-							updateTotalPrice();
-						}
-					});
-		
-					document.getElementById('increase').addEventListener('click', function() {
-						let quantity = parseInt(quantityInput.value);
-						quantityInput.value = quantity + 1;
-						updateTotalPrice();
-					});
-		
-					quantityInput.addEventListener('input', function() {
-						if (quantityInput.value < 1) {
-							quantityInput.value = 1;
-						}
-						updateTotalPrice();
-					});
-		
-					updateTotalPrice();
-				});
-			</script>
-			
-			<div class="heart-incart">
-			<heart-icon></heart-icon>
-			<img src="/src/assets/images/bell.svg" alt="알림">
-			<img src="/src/assets/images/incart.svg" alt="장바구니 담기">
-			</div>
+        <div class="product-detail-count-box">
+          <div class="product-selection-row">
+            <span>상품선택</span>
+            <div class="product-selection">
+              <span class="product-name">[풀무원] 탱탱쫄면 (4개입)</span>
+              <div class="quantity-price-row">
+                <div class="quantity-control">
+                  <product-count data-initial-value="1"></product-count>
+                </div>
+                <span class="price" id="price">4,980원</span>
+              </div>
+            </div>
+          </div>
+          <div class="total-price-container">
+            <div class="total-price">
+              <img src="/src/assets/images/totalprice.svg" alt="총 상품금액" />
+              <span id="total-price">4,980</span>
+              <img src="/src/assets/images/won.svg" alt="원" />
+            </div>
+          </div>
         </div>
-	</div>
 
-	<div class="button-box">
-        <button id="productDescBtn" class="usetab-button">상품설명</button>
-        <button id="detailInfoBtn" class="tab-button">상세정보</button>
-        <button id="reviewBtn" class="tab-button">후기</button>
-        <button id="inquiryBtn" class="tab-button">문의</button>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const pricePerItem = 4980;
+            const quantityInput = document.getElementById('quantity');
+            const totalPriceSpan = document.getElementById('total-price');
+
+            function updateTotalPrice() {
+              const quantity = parseInt(quantityInput.value);
+              const totalPrice = pricePerItem * quantity;
+              totalPriceSpan.textContent = `${totalPrice.toLocaleString()}`;
+            }
+
+            document
+              .getElementById('decrease')
+              .addEventListener('click', function () {
+                let quantity = parseInt(quantityInput.value);
+                if (quantity > 1) {
+                  quantityInput.value = quantity - 1;
+                  updateTotalPrice();
+                }
+              });
+
+            document
+              .getElementById('increase')
+              .addEventListener('click', function () {
+                let quantity = parseInt(quantityInput.value);
+                quantityInput.value = quantity + 1;
+                updateTotalPrice();
+              });
+
+            quantityInput.addEventListener('input', function () {
+              if (quantityInput.value < 1) {
+                quantityInput.value = 1;
+              }
+              updateTotalPrice();
+            });
+
+            updateTotalPrice();
+          });
+        </script>
+
+        <div class="heart-incart">
+          <heart-icon></heart-icon>
+          <img src="/src/assets/images/bell.svg" alt="알림" />
+          <img src="/src/assets/images/incart.svg" alt="장바구니 담기" />
+        </div>
+      </div>
     </div>
-	
-	    <div class="product-description">
-			<img src="/src/assets/images/product-description-top.svg" alt="상품 상세설명 상단">
-			<img src="/src/assets/images/product-description-middle.svg" alt="상품 상세설명 중단">
-		</div>
 
-		<div class="product-review">
-			<img src="/src/assets/images/product-reviews.svg" alt="상품후기">
-			<img src="/src/assets/images/review-button.svg" alt="리뷰버튼" onclick="openReviewPopup();" style="cursor: pointer;">
-			<script>
-				function openReviewPopup() {
-					const popup = window.open('/src/pages/productDetail/review.html', 'reviewPopup', 'width=600,height=600');
-					popup.focus();
-				}
-			</script>
-		</div>
-		<div class="review-board">
-		<div class="notice-container">
-			<button class="notice">
-				<img src="/src/assets/images/notice1.svg" alt="Notice 1">
-			</button>
-			<div class="panel">
-				<img src="/src/assets/images/notice-detail1.svg" alt="Notice Detail 1">
-			</div>	
-			<script>
-				document.addEventListener('DOMContentLoaded', function () {
-					var acc = document.getElementsByClassName("notice");
-					var i;
-			
-					for (i = 0; i < acc.length; i++) {
-						acc[i].addEventListener("click", function () {
-							this.classList.toggle("active");
-							var panel = this.nextElementSibling;
-							if (panel.style.display === "block") {
-								panel.style.display = "none";
-							} else {
-								panel.style.display = "block";
-							}
-						});
-					}
-				});
-			</script>	
-		</div>
-		</div>
-		<div class="product-review-detail">
-			<img src="/src/assets/images/noreview.svg" alt="상품후기 리스트">
-			<img src="/src/assets/images/review-pagenation.svg" alt="상품후기 페이지버튼" class="clickable">
-		</div>
-		<div class="product-inquiry">
-			<img src="/src/assets/images/product-inquiry.svg" alt="상품문의">
-			<img src="/src/assets/images/inquiry-button.svg" alt="문의버튼" onclick="openInquiryPopup();" style="cursor: pointer;">
-			<script>
-				function openInquiryPopup() {
-					const popup = window.open('/src/pages/productDetail/inquiry.html', 'inquiryPopup', 'width=600,height=600');
-					popup.focus();
-				}
-			</script>
-		</div>
-		<div class="product-inquiry-detail">
-			<img src="/src/assets/images/inquirylist.svg" alt="상품문의 리스트">
-			<img src="/src/assets/images/review-pagenation.svg" alt="상품문의 페이지버튼" class="clickable">
-		</div>
+    <div class="button-box">
+      <button id="productDescBtn" class="usetab-button">상품설명</button>
+      <button id="detailInfoBtn" class="tab-button">상세정보</button>
+      <button id="reviewBtn" class="tab-button">후기</button>
+      <button id="inquiryBtn" class="tab-button">문의</button>
+    </div>
 
-		<footer>
-			<footer-component></footer-component>
-		</footer>
+    <div class="product-description">
+      <img
+        src="/src/assets/images/product-description-top.svg"
+        alt="상품 상세설명 상단"
+      />
+      <img
+        src="/src/assets/images/product-description-middle.svg"
+        alt="상품 상세설명 중단"
+      />
+    </div>
 
+    <div class="product-review">
+      <img src="/src/assets/images/product-reviews.svg" alt="상품후기" />
+      <img
+        src="/src/assets/images/review-button.svg"
+        alt="리뷰버튼"
+        onclick="openReviewPopup();"
+        style="cursor: pointer"
+      />
+      <script>
+        function openReviewPopup() {
+          const popup = window.open(
+            '/src/pages/productDetail/review.html',
+            'reviewPopup',
+            'width=800,height=700'
+          );
+          popup.focus();
+        }
+      </script>
+    </div>
+    <div class="review-board">
+      <div class="notice-container">
+        <button class="notice">
+          <img src="/src/assets/images/notice1.svg" alt="Notice 1" />
+        </button>
+        <div class="panel">
+          <img
+            src="/src/assets/images/notice-detail1.svg"
+            alt="Notice Detail 1"
+          />
+        </div>
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            var acc = document.getElementsByClassName('notice');
+            var i;
 
-		
-</body>
+            for (i = 0; i < acc.length; i++) {
+              acc[i].addEventListener('click', function () {
+                this.classList.toggle('active');
+                var panel = this.nextElementSibling;
+                if (panel.style.display === 'block') {
+                  panel.style.display = 'none';
+                } else {
+                  panel.style.display = 'block';
+                }
+              });
+            }
+          });
+        </script>
+      </div>
+    </div>
+    <div class="product-review-detail">
+      <img src="/src/assets/images/noreview.svg" alt="상품후기 리스트" />
+      <img
+        src="/src/assets/images/review-pagenation.svg"
+        alt="상품후기 페이지버튼"
+        class="clickable"
+      />
+    </div>
+    <div class="product-inquiry">
+      <img src="/src/assets/images/product-inquiry.svg" alt="상품문의" />
+      <img
+        src="/src/assets/images/inquiry-button.svg"
+        alt="문의버튼"
+        onclick="openInquiryPopup();"
+        style="cursor: pointer"
+      />
+      <script>
+        function openInquiryPopup() {
+          const popup = window.open(
+            '/src/pages/productDetail/inquiry.html',
+            'inquiryPopup',
+            'width=800,height=700'
+          );
+          popup.focus();
+        }
+      </script>
+    </div>
+    <div class="product-inquiry-detail">
+      <img src="/src/assets/images/inquirylist.svg" alt="상품문의 리스트" />
+      <img
+        src="/src/assets/images/review-pagenation.svg"
+        alt="상품문의 페이지버튼"
+        class="clickable"
+      />
+    </div>
+
+    <footer>
+      <footer-component></footer-component>
+    </footer>
+  </body>
 </html>
