@@ -94,18 +94,7 @@ h2 {
 
 /* footer */
 .product-list-wrapper {
-  width: 100%; 
-  max-width: var(--default-width); 
-  margin: 0 auto; 
-  height: auto;
-  min-height: 100%;
-  padding-bottom: 830.449px;
-}
-
-footer-component {
-  height: 830.449px;
-  position: relative;
-  transform: translateY(-100%);
+  padding-bottom: 200px;
 }
 
 summary::-webkit-details-marker {
