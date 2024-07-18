@@ -67,10 +67,10 @@ class CartClass extends HTMLElement {
       </style>
       <div class="cartclass-container">
         <div class="icon">
-          <img src="/public/icons/Food${icon}.svg" alt="icon"></div>
+          <img src="/icons/Food${icon}.svg" alt="icon"></div>
         <p class="classname">${title}</p>
         <button class="icon2" aria-label="toggle">
-          <img src="/public/icons/${arrowIcon}" alt="icon">
+          <img src="/icons/${arrowIcon}" alt="icon">
         </button>
       </div>
     `;

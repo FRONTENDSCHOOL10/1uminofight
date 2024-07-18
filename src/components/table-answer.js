@@ -69,11 +69,11 @@ class TableAnswer extends HTMLElement {
 
     <div class="qa-container">
       <div class="question-container">
-        <div class="icon"><svg><use href="/public/sprite/icons.svg#Question"></use></svg></div>
+        <div class="icon"><svg><use href="/sprite/icons.svg#Question"></use></svg></div>
         <p class="question">${question}</p>
       </div>
       <div class="answer-container">
-        <div class="icon"><svg><use href="/public/sprite/icons.svg#Answer"></use></svg></div>
+        <div class="icon"><svg><use href="/sprite/icons.svg#Answer"></use></svg></div>
         <div class="qa-text">
           <p class="answer">${answer}</p>
           <p class="date">${date}</p>

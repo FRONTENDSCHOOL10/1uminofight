@@ -134,7 +134,7 @@ class CartProducts extends HTMLElement {
         }
       </style>
       <div class="cartproduct-container">
-        <button class="check-icon" id="check-icon"><img src="/public/icons/CheckTrue.svg" alt="체크버튼"></button>
+        <button class="check-icon" id="check-icon"><img src="/icons/CheckTrue.svg" alt="체크버튼"></button>
         <div class="product-img"><img src="/src/assets/images/${productImage}.png" alt="제품이미지"></div>
         <div class="title-container">
           <p class="product-title">${productTitle}</p>
@@ -150,7 +150,7 @@ class CartProducts extends HTMLElement {
           ${totalRegularPrice !== null ? `<p class="regular-price" id="regular-price">${this.formatPrice(totalRegularPrice)}원</p>` : ''}
         </div>
         <button class="close" id="close-btn" type="button">
-          <img src="/public/icons/Close.svg" alt="닫기 버튼">
+          <img src="/icons/Close.svg" alt="닫기 버튼">
         </button>
       </div>
     `;
@@ -212,8 +212,8 @@ customElements.define('cart-products', CartProducts);
 
 function changeCheckState(checkIcon) {
   if (checkIcon.src.includes('CheckTrue.svg')) {
-    checkIcon.src = '/public/icons/CheckFalse.svg';
+    checkIcon.src = '/icons/CheckFalse.svg';
   } else {
-    checkIcon.src = '/public/icons/CheckTrue.svg';
+    checkIcon.src = '/icons/CheckTrue.svg';
   }
 }
