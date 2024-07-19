@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Popup</title>
+	<link rel="stylesheet" href="/src/pages/productDetail/inquiry.css">
+	<script type="module" src="/src/pages/productDetail/product-Detail.js"></script>
+</head>
+<body>
+	<div class="popup">
+		<h1>상품 문의하기</h1>
+		<div class="productreview">
+			<img src="/src/assets/images/productreview.svg" alt="상품 설명 상단">
+			<p>[풀무원] 탱탱쫄면 (4개입)</p>
+		</div>
+		<div class="title">
+			<h3>제목</h3>
+			 <div class="input-container">
+				 <textarea id="title-content" placeholder="제목을 입력해 주세요"></textarea>
+			 </div>
+			 <h3>내용</h3>
+			 <div class="content-container">
+				 <textarea id="content" placeholder="상품문의 작성 전 확인해 주세요.
+ 
+ · 답변은 영업일 기준 2~3일 소요됩니다.
+ · 해당 게시판의 성격과 다른 글은 사전동의 없이 담당 게시판으로 이동될 수 있습니다.
+ · 배송관련, 주문(취소/교환/환불)관련 문의 및 요청사항은 마이칼리 내 1:1 문의에 남겨주세요."></textarea>
+			 </div>
+		 </div>
+		 <form id="reviewForm">
+			 <button type="cancle">취소</button>
+			 <button type="submit">등록</button>
+		 </form>
+	 </div>
+	 
+	
+</body>
+</html>

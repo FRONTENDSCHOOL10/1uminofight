@@ -1,0 +1,50 @@
+@import url('/src/styles/style.css');
+@import url('/src/styles/reset.css');
+@import url('/src/styles/base.css');
+
+h2 {
+  font-family:
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    'Helvetica Neue',
+    'Segoe UI',
+    'Apple SD Gothic Neo',
+    'Noto Sans KR',
+    'Malgun Gothic',
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    sans-serif;
+  width: 1050px;
+  height: 64px;
+  font-weight: 700;
+  font-size: 28.43px;
+  line-height: 39.8px;
+  text-align: center;
+}
+.main-middle {
+  width: 1050px;
+  margin: 0 auto;
+  position: relative;
+}
+.main-section {
+  height: 688px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 28px;
+  padding: 40px 0px 40px 0px;
+  margin: 0 auto;
+}
+.line-banner {
+  margin: 0 auto;
+  padding: 40px 0px 40px 0px;
+}
+aside {
+position: absolute;
+left: 1350px;
+top: 150px;
+}

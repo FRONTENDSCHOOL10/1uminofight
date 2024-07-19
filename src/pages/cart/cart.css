@@ -1,0 +1,159 @@
+.container {
+  width: 1050px;
+  margin: 0 auto;
+}
+.header2 {
+  width: 100%;
+  height: 133px;
+  text-align: center;
+  line-height: 133px;
+  font-size: 14px;
+}
+.header2 h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.main {
+  display: flex;
+  width: 100%;
+  height: 955.47px;
+}
+.left-section {
+  width: 742px;
+  height: 942px;
+  padding: 20px;
+}
+.selector {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+.divider {
+  width: 1px;
+  height: 14px;
+  background-color: gray;
+}
+button {
+  border: none;
+  background-color: white;
+}
+.right-section {
+  margin-top: 50px;
+  display: flex;
+  flex-flow: column;
+  width: 284px;
+  height: 942px;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.address-container {
+  width: 284px;
+  height: 222px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
+  gap: 8px;
+  height: 25px;
+}
+
+.header .icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.header p {
+  margin: 0;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.address-container p {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.sub {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #888;
+}
+
+.change {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: white;
+  color: rgb(95, 0, 128);
+  border: 1px solid rgb(95, 0, 128);
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.charge {
+  display: flex;
+  flex-flow: column;
+  width: 284px;
+  height: 198px;
+  background-color: #fafafa;
+  justify-content: center;
+  align-items: center;
+}
+.right-section .amount,
+.right-section .discount2,
+.right-section .shipping,
+.right-section .total,
+.right-section .notice {
+  width: 244px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: row-nowrap;
+  font-size: 17px;
+  line-height: 1.1;
+  justify-content: space-between;
+}
+
+.order-button {
+  width: 284px;
+  height: 56px;
+  background-color: rgb(95, 0, 128);
+  border-radius: 5px;
+  color: #fff;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+.notice {
+  display: flex;
+  flex-flow: column;
+  color: rgb(153, 153, 153);
+  text-align: left;
+}
+.notice p {
+  font-size: 12px;
+}
+
+hr.custom-line {
+  width: 244px;
+  border: none;
+  height: 1px;
+  background-color: gray;
+}

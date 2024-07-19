@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <title>회원가입 - 컬리</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/src/pages/register/register.css" />
+    <link rel="icon" type="image/x-icon" href="/kurly.png" />
+    <script type="module" src="/src/pages/register/register.js"></script>
+  </head>
+  <body>
+    <h1 class="sr-only">마켓칼리 회원가입 페이지</h1>
+    <c-header></c-header>
+
+    <section role="main">
+      <h2>회원가입</h2>
+      <span class="required-info">
+        <span class="required-icon" aria-hidden="true">*</span>
+        필수입력사항
+      </span>
+
+      <div class="register-wrapper" role="group">
+        <div class="id-wrapper">
+          <div
+            class="register email"
+            role="group"
+            aria-label="이메일 입력 묶음"
+          >
+            <span
+              >이메일
+              <span class="required-icon" aria-label="필수입력사항">*</span>
+            </span>
+            <label for="idField"></label>
+            <input
+              required
+              type="id"
+              id="idField"
+              placeholder="이메일을 입력해주세요."
+            />
+            <button class="id-validation validation">중복확인</button>
+          </div>
+          <span class="error id-error-message">이메일 형식이 아닙니다.</span>
+        </div>
+
+        <div class="pw-wrapper">
+          <div class="register pw" role="group" aria-label="비밀번호 입력 묶음">
+            <span
+              >비밀번호
+              <span class="required-icon" aria-label="필수입력사항">*</span>
+            </span>
+            <label for="pwField"></label>
+            <input
+              required
+              type="password"
+              id="pwField"
+              placeholder="비밀번호를 입력해주세요"
+            />
+          </div>
+          <span class="error pwd-error-message">비밀번호 형식이 아닙니다.</span>
+        </div>
+
+        <div class="pw-confirm-wrapper">
+          <div
+            class="register pw-confirm"
+            role="group"
+            aria-label="비밀번호 확인 묶음"
+          >
+            <span
+              >비밀번호 확인
+              <span class="required-icon" aria-label="필수입력사항">*</span>
+            </span>
+            <label for="pwConfirmField"></label>
+            <input
+              required
+              type="password"
+              id="pwConfirmField"
+              placeholder="비밀번호를 한번 더 입력해주세요."
+            />
+          </div>
+          <span class="error pwd-confirm-error-message"
+            >비밀번호가 일치하지 않습니다.</span
+          >
+        </div>
+
+        <div
+          class="register user-name"
+          role="group"
+          aria-label="이름 입력 그룹"
+        >
+          <span
+            >이름
+            <span class="required-icon" aria-label="필수입력사항">*</span>
+          </span>
+          <label for="userName"></label>
+          <input
+            required
+            type="/"
+            id="userName"
+            placeholder="이름을 입력해 주세요"
+          />
+        </div>
+
+        <div
+          class="register phone-number"
+          role="group"
+          aria-label="휴대폰 번호 입력 그룹"
+        >
+          <span>휴대폰</span>
+          <input-text-container
+            label="숫자만 입력해주세요"
+            aria-label="전화번호 입력 칸"
+          ></input-text-container>
+          <button
+            class="phone-number-validation validation"
+            aria-label="인증번호 받기 버튼"
+          >
+            인증번호 받기
+          </button>
+        </div>
+
+        <div class="register address" role="group" aria-label="주소 검색 그룹">
+          <span>주소</span>
+          <div>
+            <button class="address-search" aria-label="주소 검색 버튼">
+              주소 검색
+            </button>
+            <p>배송지에 따라 상품 정보가 달라질 수 있습니다.</p>
+          </div>
+        </div>
+
+        <div class="register gender" role="group" aria-label="성별 선택 그룹">
+          <span id="gender-selection">성별</span>
+          <div
+            class="gender-select"
+            role="radiogroup"
+            aria-labelledby="gender-selection"
+          >
+            <span class="male radio-input">
+              <input type="radio" name="gender" id="male" />
+              <label for="male">남자</label>
+            </span>
+            <span class="female radio-input">
+              <input type="radio" name="gender" id="female" />
+              <label for="female">여자</label>
+            </span>
+            <span class="no-select radio-input">
+              <input type="radio" name="gender" id="no-select" />
+              <label for="no-select">선택안함</label>
+            </span>
+          </div>
+        </div>
+
+        <div
+          class="register birthday"
+          role="group"
+          aria-label="생년월일 작성 그룹"
+        >
+          <span>생년월일</span>
+          <input-text-container
+            label="YYYY /  MM / DD"
+            aria-label="생년월일 입력 칸"
+          ></input-text-container>
+        </div>
+      </div>
+    </section>
+
+    <!-- 이용약관동의 -->
+    <aside>
+      <h3>
+        이용약관동의
+        <span class="required-icon" aria-label="필수입력사항">*</span>
+      </h3>
+      <ul>
+        <li class="agreement-list">
+          <span class="agreement-main-text completeAgreement">
+            <input type="checkbox" id="completeAgreement" />
+            <label for="completeAgreement">전체 동의합니다.</label>
+          </span>
+        </li>
+        <li class="agreement-list">
+          <span class="agreement-main-text">
+            <input type="checkbox" id="useAgreement" class="required-1" />
+            <label for="useAgreement">이용약관 동의 (필수)</label>
+          </span>
+          <span tabindex="0" role="button" class="agreement-more-info"
+            >약관보기
+            <img src="/purple-arrow-right.png" alt="약관 설명 보기 아이콘" />
+          </span>
+        </li>
+        <li class="agreement-list">
+          <span class="agreement-main-text">
+            <input type="checkbox" id="personalInfo" class="required-2" />
+            <label for="personalInfo">개인정보 수집 · 이용 동의 (필수)</label>
+          </span>
+          <span tabindex="0" role="button" class="agreement-more-info"
+            >약관보기
+            <img src="/purple-arrow-right.png" alt="약관 설명 보기 아이콘" />
+          </span>
+        </li>
+        <li class="agreement-list">
+          <span class="agreement-main-text">
+            <input type="checkbox" id="benefitInfo" />
+            <label for="benefitInfo"
+              >무료배송, 할인쿠폰 등 혜택/정보 수신 동의 (선택)
+            </label>
+          </span>
+          <span tabindex="0" role="button" class="agreement-more-info"
+            >약관보기
+            <img src="/purple-arrow-right.png" alt="약관 설명 보기 아이콘" />
+          </span>
+        </li>
+        <li class="agreement-list">
+          <span class="agreement-main-text">
+            <input type="checkbox" id="ageRegulation" class="required-3" />
+            <label for="ageRegulation">본인은 만 14세 이상입니다. (필수)</label>
+          </span>
+          <span tabindex="0" role="button" class="agreement-more-info"
+            >약관보기
+            <img src="/purple-arrow-right.png" alt="약관 설명 보기 아이콘" />
+          </span>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- 가입하기 -->
+    <div class="register register-button-wrapper">
+      <button class="register-button" type="submit">가입하기</button>
+    </div>
+
+    <footer-component></footer-component>
+  </body>
+</html>

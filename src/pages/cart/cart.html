@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <title>칼리 - 마켓칼리/뷰티칼리</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/pages/cart/cart.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/src/main.js"></script>
+    <link rel="icon" type="image/x-icon" href="/kurly.png" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1 class="sr-only">마켓칼리 장바구니 페이지</h1>
+    <c-header></c-header>
+    <div class="container">
+      <div class="header2"><h2>장바구니</h2></div>
+      <div class="main">
+        <div class="left-section">
+          <div class="selector">
+            <button class="check-icon" id="check-icon">
+              <img src="/icons/CheckTrue.svg" alt="체크버튼" />
+            </button>
+            <button class="select-all">전체선택</button>
+            <span class="divider"></span>
+            <button class="delete-selected">선택 삭제</button>
+          </div>
+          <div class="frozen">
+            <cart-class icon="1" title="냉동 상품"></cart-class>
+            <cart-products
+              product-image="주꾸미"
+              product-title="[압구정주꾸미] 주꾸미 볶음 500g"
+              subtitle="[압구정주꾸미] 주꾸미 볶음 2종 (택1)"
+              quantity="1"
+              regular-price="13400"
+              discount-price="9900"
+            ></cart-products>
+            <cart-products
+              product-image="피스타치오"
+              product-title="[상하목장] 하트바이트 피스타치오 31mlX10개입"
+              subtitle="[상하목장] 하트바이트 아이스크림 31mlX10개입 2종 택1"
+              quantity="1"
+              regular-price="16900"
+              discount-price="13520"
+            ></cart-products>
+          </div>
+          <div class="fridge">
+            <cart-class icon="2" title="냉장 상품"></cart-class>
+            <cart-products
+              product-image="고기"
+              product-title="[브룩클린668] 호주산 목초육 치마살 구이용 300g(냉장)"
+              subtitle=""
+              quantity="1"
+              regular-price="16590"
+              discount-price="12990"
+            ></cart-products>
+            <cart-products
+              product-image="식빵"
+              product-title="[도제] 촉촉한 생식빵 2cm"
+              subtitle="[도제] 촉촉한 생식빵 2종 (택1)"
+              quantity="1"
+              regular-price=""
+              discount-price="6990"
+            ></cart-products>
+          </div>
+          <div class="roomtemp">
+            <cart-class icon="3" title="상온 상품"></cart-class>
+            <cart-products
+              product-image="고무장갑"
+              product-title="[프로그] 고무장갑 컴포트 퍼플 5개입 소형"
+              subtitle="[프로그] 고무장갑 컴포트 퍼플 3개입&5개입 6종(택1)"
+              quantity="1"
+              regular-price="12900"
+              discount-price="9800"
+            ></cart-products>
+          </div>
+          <div class="selector">
+            <button class="check-icon" id="check-icon">
+              <img src="/icons/CheckTrue.svg" alt="체크버튼" />
+            </button>
+            <button class="select-all">전체선택</button>
+            <span class="divider"></span>
+            <button class="delete-selected">선택 삭제</button>
+          </div>
+        </div>
+        <div class="right-section">
+          <!-- <address
+            address="서울 중랑구 면목로 42길 11(행운빌딩) 603호"
+          ></address> -->
+          <div class="address-container">
+            <div class="header">
+              <div class="icon">
+                <svg><use href="/sprite/icons.svg#Location"></use></svg>
+              </div>
+              <p>배송지</p>
+            </div>
+            <p>서울 중랑구 면목로 42길 11(행운빌딩) 603호</p>
+            <p class="sub">샛별배송</p>
+            <button class="change">배송지 변경</button>
+          </div>
+          <div class="charge">
+            <div class="amount">
+              <p>상품금액</p>
+              <p>원</p>
+            </div>
+            <div class="discount2">
+              <p>상품할인금액</p>
+              <p>원</p>
+            </div>
+            <div class="shipping">
+              <p>배송비</p>
+              <p>원</p>
+            </div>
+            <hr class="custom-line" />
+            <div class="total">
+              <p>결제예정금액</p>
+              <p>원</p>
+            </div>
+          </div>
+          <button class="order-button">주문하기</button>
+          <div class="notice">
+            <p>· 쿠폰/적립금은 주문서에서 사용 가능합니다.</p>
+            <p>· [주문완료] 상태일 경우 주문 취소만 가능합니다.</p>
+            <p>
+              · [마이컬리>주문내역 상세페이지] 에서 직접 취소하실 수 있습니다.
+            </p>
+            <p>
+              · 쿠폰, 적립금 사용 금액을 제외한 실 결제 금액 기준으로 최종
+              산정됩니다.
+            </p>
+            <p>
+              · 상품별로 적립금 지급 기준이 다를 수 있습니다. (상품 상세
+              페이지에서 확인 가능합니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer-component></footer-component>
+  </body>
+</html>

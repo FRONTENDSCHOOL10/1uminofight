@@ -1,0 +1,49 @@
+<!-- icon-location 추가해야 함 -->
+<!-- footer 크기 조절 -->
+
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <title>칼리 - 마켓칼리/뷰티칼리</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/x-icon" href="/kurly.png" />
+    <link rel="stylesheet" href="/src/pages/mainPage/mainPage.css" />
+    <script type="module" src="/src/pages/mainPage/mainPage.js"></script>
+  </head>
+  <body>
+    <h1 class="sr-only">마켓칼리 메인페이지</h1>
+    <c-header></c-header>
+    <main-banner></main-banner>
+
+    <div class="main-middle">
+      <section class="main-section main-first-section">
+        <h2>이 상품 어때요?</h2>
+        <div class="product-slide-container main-first-products">
+          <ul></ul>
+        </div>
+      </section>
+
+      <div class="line-banner">
+        <img
+          src="/src/assets/images/line-banner.png"
+          alt="10월 퍼플위크 관련 광고배너"
+        />
+      </div>
+
+      <section class="main-section main-second-section">
+        <h2>놓치면 후회할 가격</h2>
+        <div class="product-slide-container main-second-products">
+          <ul></ul>
+        </div>
+      </section>
+
+      <aside>
+        <recent-viewed></recent-viewed>
+      </aside>
+    </div>
+
+    <footer-component></footer-component>
+  </body>
+</html>

@@ -1,0 +1,245 @@
+@import url('/src/styles/style.css');
+@import url('/src/styles/reset.css');
+@import url('/src/styles/base.css');
+
+:root {
+  --default-font-weight: 400;
+  --bold-font-weight: 600;
+  --default-button-width: 20.8125rem;
+  --karly-color: #5f0080;
+  --default-height: 2.75rem;
+  --default-font-size: 1rem;
+  --default-width: 40rem;
+}
+
+
+body,
+button,
+.register input {
+  font-family:
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    'Helvetica Neue',
+    'Segoe UI',
+    'Apple SD Gothic Neo',
+    'Noto Sans KR',
+    'Malgun Gothic',
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    sans-serif;
+}
+section, aside {
+  width: var(--default-width);
+  margin: 0 auto;
+}
+
+h2 {
+  font-weight: var(--bold-font-weight);
+  font-size: 21.33px;
+  line-height: 31.99px;
+  text-align: center;
+  padding: 80px 0px 40px 0px;
+}
+input-text-container, .register input, .gender-select {
+  width: var(--default-button-width);
+  height: var(--default-height);
+}
+.required-info {
+  color: #333333;
+  font-weight: var(--bold-font-weight);
+  font-size: 12px;
+  line-height: 18px;
+  display: flex;
+  justify-content: end;
+}
+.required-icon {
+  color: #f03f40;
+}
+.register-wrapper {
+  border-width: 2px 0 1px 0;
+  border-style: solid;
+  border-color: #333333;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.register {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 20px 0px;
+}
+.register input {
+  border-radius: 4px;
+  border: 1px solid #A6A6A6;  
+  padding-left: 20px;
+}
+.register input::placeholder {
+  font-size: var(--default-font-size);
+  font-weight: var(--default-font-weight);
+  color: #A6A6A6;
+  line-height: 25.6px;
+}
+
+.register > span {
+  font-weight: var(--bold-font-weight);
+  font-size: var(--default-font-size);
+  line-height: 24px;
+  width: 139px;
+  height: var(--default-height);
+  padding: 4px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+button {
+  width: 143px;
+  height: var(--default-height);
+  color: var(--karly-color);
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid var(--karly-color);
+  font-weight: var(--bold-font-weight);
+  font-size: var(--default-font-size);
+  line-height: 24px;
+  cursor: pointer;
+}
+.validation {
+  margin-left: 8px;
+}
+button.address-search, .error{
+  width: var(--default-button-width);
+}
+.address p {
+  font-weight: var(--default-font-weight);
+  font-size: 12px;
+  line-height: 19.2px;
+  margin-top: 3px;
+}
+.gender-select {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.radio-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+input[type='radio'] {
+  appearance: none; 
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  border-radius: 50%; 
+  margin: 0; 
+}
+
+input[type='radio']:checked {
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  border: 2px solid var(--karly-color);
+}
+.register-button {
+  display: block;
+  width: 340px;
+  color: white;
+  background-color: var(--karly-color);
+  margin: 0 auto;
+}
+.register-button-wrapper {
+  width: var(--default-width);
+  margin: 0 auto;
+  padding: 40px 0px 84px 0px;
+  border-top: 1px solid #c4c4c4;
+}
+.error {
+  display: none;
+  width: var(--default-button-width);
+  margin: 0 auto;
+  color: red;
+  font-size: 15px;
+  position: absolute;
+  top: 75px;
+  left: 150px;
+}
+.is-invalid{
+  display: flex;
+}
+.pw-wrapper, .pw-confirm-wrapper, .id-wrapper {
+  position: relative;
+}
+#idField, #pwField, #pwConfirmField, #userName {
+  box-sizing: border-box;
+}
+
+/* 이용약관동의 */
+.agreement-list {
+  box-sizing: border-box;
+  width: 429px;
+  height: 51px;
+  padding: 12px 0 12px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.agreement-main-text {
+  font-weight: var(--default-font-weight);
+  font-size: var(--default-font-size);
+  line-height: 25.6px;
+  position: relative;
+
+  input {
+    position: absolute;
+    left: 3px;
+    appearance: none;
+    width: 24px;
+    height: 24px; 
+    margin: 0;
+    justify-self: start;
+    align-self: center;
+  }
+  label{
+    background: url(/src/assets/images/unchecked.png) no-repeat 0 0 /contain;
+    padding: 3.5px 0 3.5px 32.5px;
+    white-space: nowrap;
+
+  }
+  input:checked + label{
+    background-image: url(/src/assets/images/checked.png);
+  } 
+}
+.agreement-more-info {
+  color: var(--karly-color);
+  font-size: 0.75rem;
+}
+.completeAgreement {
+  label {
+    font-weight: 700;
+  }
+}
+
+/* 이용약관동의 타이틀 */
+h3{
+  width: 139px;
+  height: var(--default-height);
+  padding: 4px;
+  font-weight: var(--bold-font-weight);
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+aside{
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
+}
