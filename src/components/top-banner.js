@@ -46,7 +46,7 @@ template.innerHTML = `
       cursor: pointer;
       position: absolute;
       right: 400px;
-      right: 300px;
+      
     }
   </style>
   <div class="Top-banner">
