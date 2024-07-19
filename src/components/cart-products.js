@@ -157,6 +157,7 @@ class CartProducts extends HTMLElement {
 
   addEventListeners() {
     const decreaseBtn = this.shadowRoot.getElementById('decrease-btn');
+    const increaseBtn = this.shadowRoot.getElementById('increase-btn');
 
     decreaseBtn.addEventListener('click', () => {
       let quantity = parseInt(this.getAttribute('quantity'));
