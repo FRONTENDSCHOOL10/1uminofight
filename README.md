@@ -19,8 +19,7 @@
 
 ## 🔎 배포 사이트 및 정보 
 
-  :link: 배포 사이트 : https://luminofight.netlify.app/    
-  :link: Github : https://github.com/FRONTENDSCHOOL10/1uminofight/tree/develop
+  :link: 배포 사이트 : https://luminofight.netlify.app/ 
   
 
 
