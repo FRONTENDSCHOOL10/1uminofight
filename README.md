@@ -6,7 +6,7 @@
 > 
 
 ## 🫧 Project: 마켓칼리
-- 프로젝트 소개: 
+- 프로젝트 소개: 마켓칼리 클론코딩
 - 개발 기간: 2024-07-05 ~ 2024-07-19
 - 개발 인원: 4명 
 
@@ -19,8 +19,8 @@
 
 ## 🔎 배포 사이트 및 정보 
 
- 🔗 :link: 배포 사이트 : https://luminofight.netlify.app/    
- 🔗 :Github: https://github.com/FRONTENDSCHOOL10/1uminofight/tree/develop
+  :link: 배포 사이트 : https://luminofight.netlify.app/    
+  :Github: https://github.com/FRONTENDSCHOOL10/1uminofight/tree/develop
   
 
 
